@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+            jakarta: ["Plus Jakarta Sans", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body class="bg-#FFFFFF">
+
+<div class="flex min-h-screen">
+
+  <!-- SIDEBAR -->
+  <aside
+    id="sidebar"
+    class="fixed lg:relative 
+    z-50 
+    min-h-screen 
+    w-[280px] 
+    bg-[#E7F0FF] 
+    border-r border-gray-200 
+    transition-transform duration-300
+    -translate-x-full
+    flex flex-col justify-between
+    lg:translate-x-0 
+    font-jakarta text-md font-semibold
+    "
+  >
+
+    <!-- LOGO -->
+    <div class="px-6 py-4">
+      <img
+        src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png"
+        alt="HRFlow Africa"
+        class="w-[180px]"
+      >
+    </div>
+
+
+    
+    <!-- NAVIGATION -->
+    <nav class="px-4 space-y-4 space-x-6 font-jakarta mt-18">
+
+      <!-- dashboard -->
+      <a
+  href="employee-dashboard.html"
+  class="group flex items-center gap-4 px-10 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Dashboard_button_bxsf4e.png"
+    alt="Dashboard"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Dashboard</span>
+</a>
+
+     <!-- directory -->
+      <a
+  href="employee-myprofile.html"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407708/Icon_2_hs0hvr.png"
+    alt="Directory"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span> My Profile</span>
+</a>
+
+    <!-- recruitment -->
+      <a
+  href="employee-attendance.html"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780854792/fingerprint-solid1_fvrni9.svg"
+    alt="Recruitment"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Attendance</span>
+</a>
+
+    <!-- attendance -->
+      <a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407800/Icon_5_esqxfl.png"
+    alt="Attendance"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Leave Request</span>
+</a>
+
+    <!-- leave -->
+    <a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_ax5qwf.png"
+    alt="Leave"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Payroll</span>
+</a>
+    
+    <!-- payroll -->
+    <a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780856331/arrow-trend-up-solid_odkebc.svg"
+    alt="Payroll"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Performance</span>
+</a>
+
+    <!-- analytics -->
+<a
+  href="employee-Message (2).html"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851275/envelope-regular_jldjtl.svg"
+    alt="Analytics"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Messages</span>
+</a>
+
+
+        <!-- roles and permission -->
+<a
+  href="employee-notification.html"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/ion_people-outline_e3qrc7.png"
+    alt="Roles"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Notifications</span>
+</a>
+
+<!-- divider -->
+<!-- <div class="border-t border-[#D8DEE9] my-4"></div> -->
+
+    <!-- settings -->
+     <a
+  href="employee-settings.html"
+  class="flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_1_qfhnrd.png"
+    alt="Settings"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Settings</span>
+</a>
+       
+    </nav>
+
+    <!-- BOTTOM -->
+  
+    <!-- divider -->
+    
+
+    <div class="mx-auto w-full px-4 ">
+    
+      <div class="border-t border-[grey] "></div>
+      <button
+  class="group flex items-center gap-4 px-4 py-2 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300 w-full mt-8 mb-2 text-"
+>
+  <img
+    src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851177/circle-question-regular_llozdb.svg"
+    alt="Logout"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert "
+  />
+
+  <span>Help center</span>
+</button>
+        <!-- logout -->
+    <button
+  id="logoutBtn"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300 w-full text-"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407800/Group_qlqzro.png"
+    alt="Logout"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert "
+  />
+
+  <span>Sign Out</span>
+</button>
+    
+
+    </div>
+    
+  </aside>
+
+<div
+  id="overlay"
+  class="fixed inset-0 bg-black/40 hidden z-40 lg:hidden"
+></div>
+
+
+
+  <!-- MAIN WRAPPER -->
+  <div class="flex-1 ml-0 flex flex-col">
+
+    <!-- TOPBAR -->
+    <header
+      id="topbar"
+      class="h-[90px] bg-white border-b border-gray-200 px-6 lg:px-8 flex items-center justify-between"
+    >
+
+      <!-- LEFT -->
+      <div class="flex items-center gap-4">
+
+        <button
+          id="menuToggle"
+          class="lg:hidden text-2xl"
+        >
+          ☰
+        </button>
+
+        <div
+          class="hidden md:flex items-center gap-3 bg-[#F2F4F7] rounded-xl px-4 py-3 w-[550px]"
+        >
+
+          <span class="text-gray-500"><img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780434723/Icon_8_jdeezs.png" alt="search"></span>
+
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search employee leave history..."
+            class="w-full bg-transparent outline-none font-jakarta text-sm"
+          >
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex items-center gap-5">
+
+        <button id="notificationBtn">
+          <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780434724/Icon_6_dshtaj.png" alt="bell">
+        </button>
+
+        <button id="helpBtn">
+          <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780434723/Icon_7_giyvli.png" alt="help">
+        </button>
+
+        <button id="settingsBtn">
+          <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_1_qfhnrd.png" alt="settings">
+        </button>
+
+        <div class="h-8 border-l border-gray-300"></div>
+
+        <div class="hidden md:block text-right">
+
+          <p class="font-inter text-sm font-semibold">
+            Rosita Andrew
+          </p>
+
+          <p class="font-jakarta text-xs text-gray-500">
+            HR Director
+          </p>
+
+        </div>
+
+        <img
+          src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780434723/Ellipse_11_yv6wht.png"
+          alt="Profile"
+          class="w-11 h-11 rounded-full object-cover"
+        >
+
+      </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main
+      id="mainContent"
+      class="flex-1 p-2 lg:p-1"
+    >
+
+      <!-- ================================================= -->
+      <!-- TEAM MEMBERS SHOULD PASTE THEIR PAGE CONTENT HERE -->
+      <!-- ================================================= -->
+
+
+
+      <!-- Example Placeholder -->
+     <div class="bg-[transparent] rounded-2xl p-8 py-2 relative w-full">
+
+        <head class="bg-blue-500 rounded-2xl p-8 shadow-sm w-full h-10 relative">
+          <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851127/arrow-left-solid_ol4kgn.svg" alt="" class="w-3 h-3 stroke-blue-400 fill-blue-600 absolute top-0 left-0 z-100 my-1 mx-8">
+          <h1 class="text-8 text-black text-4xl font-semibold mt-2">Settings</h1>
+          <p class="mt-2 text-[#6c757D]">Manage your account Preference, security, and notification</p>
+
+          <div class="grid grid-cols-[33%_63%] gap-4 h-auto my-4">
+        <div class="space-y-4">
+           <div class="row-span-2 rounded-xl bg-[transparent] px-6 py-4 h-auto relative overflow-hidden">
+            <div class="flex gap-4 items-center hover:bg-[#3856D6] text-black p-4 font-semibold rounded-xl transition-all duration-300 hover:text-[#FFFFFF]">
+              <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851272/circle-user-regular_ibvqda.svg" alt="" class="w-8 h-8"> 
+              <h2>Account Information</h2>
+            </div>
+
+
+
+            <div class="flex gap-4 items-center hover:bg-[#3856D6] text-black p-4 font-semibold rounded-xl transition-all duration-300 hover:text-[#FFFFFF]">
+
+              <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851275/lock-solid_ianipc.svg" alt="" class="w-8 h-8 object-contain"> 
+              <h2>Password Management</h2>
+
+            </div>
+
+
+
+            <div class="flex gap-4 items-center hover:bg-[#3856D6] text-black p-4 font-semibold rounded-xl transition-all duration-300 hover:text-[#FFFFFF]">
+               <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780936950/shield-halved-solid_bxqxem.svg" alt="" class="w-8 h-8"> 
+              <h2>Security Setting</h2>
+
+            </div>
+            <div class="flex gap-4 items-center hover:bg-[#3856D6] text-black p-4 font-semibold rounded-xl transition-all duration-300 hover:text-[#FFFFFF]">
+               <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780937727/paint-plate_sohkqe.png" alt="" class="w-8 h-8"> 
+              <h2>Themes & Appearance</h2>
+
+            </div>
+            <div class="flex gap-4 items-center hover:bg-[#3856D6] text-black p-4 font-semibold rounded-xl transition-all duration-300 hover:text-[#FFFFFF]">
+               <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780937900/eye-regular_ejjtep.svg" alt="" class="w-8 h-8"> 
+              <h2 class="text-[#212529]">Privacy Settings</h2>
+            </div>
+           </div>
+          
+          
+        </div> 
+
+        <!-- Right column -->
+        <div class="flex flex-col gap-4">
+          <!-- RIght 1 start -->
+          <div class="col-start-2 rounded-xl bg-[transparent] border-2 border-[#6c757D] p-2 ">
+            <div class="m-2 p-2 flex flex-row justify-between items-center w-full">
+              <h2 class="text-[#212529] font-semibold">Account Information</h2>
+              <div class="bg-[#3856D6] text-[#F8F9FC] rounded-lg px-4 py-2 flex justify-center items-center font-semibold">Save Changes</div>
+            </div>
+
+            <div class="px-4"> 
+              <form class="max-w-4xl mx-auto bg-white p-6 rounded-xl">
+  <div class="grid grid-cols-2 gap-6">
+
+    <!-- First Name -->
+    <div>
+      <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+        FULL 
+      </label>
+      <input
+        type="text"
+        id="firstName"
+        class="w-full px-4 py-2 bg-[#F8F9FC] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="Enter first name"
+      />
+    </div>
+
+    <!-- Last Name -->
+    <div>
+      <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+        EMPLOYEE ID
+      </label>
+      <input
+        type="text"
+        id="lastName"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-[#F8F9FC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="Enter last name"
+      />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+        EMAIL ADDRESS
+      </label>
+      <input
+        type="email"
+        id="email"
+        class="w-full px-4 py-2 bg-[#F8F9FC] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="Enter email address"
+      />
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+        PHONE NUMBER
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        class="w-full px-4 py-2 bg-[#F8F9FC] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="Enter phone number"
+      />
+    </div>
+
+    <!-- Message (spans both columns) -->
+    <div class="col-span-2">
+      <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+        BIOGRAPHY
+      </label>
+      <textarea
+        id="message"
+        rows="4"
+        class="w-full px-4 py-2 bg-[#F8F9FC] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="Write your message here..."
+      ></textarea>
+    </div>
+
+    <!-- Submit Button (spans both columns) -->
+    <div class="col-span-2">
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+      >
+        Submit
+      </button>
+    </div>
+
+  </div>
+</form>
+            </div>
+          </div>
+          
+        </div>
+        </head>
+      
+      </div>
+
+
+
+      <!-- ================================================= -->
+      <!-- TEAM MEMBERS SHOULD PASTE THEIR PAGE CONTENT HERE -->
+      <!-- ================================================= -->
+
+    </main>
+
+  </div>
+
+</div>
+
+<script>
+const logoutBtn = document.getElementById("logoutBtn");
+
+logoutBtn?.addEventListener("click", () => {
+    const confirmLogout = confirm(
+        "Are you sure you want to sign out?"
+    );
+
+    if (confirmLogout) {
+        window.location.href = "employee-welcome.html";
+    }
+});
+</script>
+
+</body>
+</html>

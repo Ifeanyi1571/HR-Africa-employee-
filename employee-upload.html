@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Documents</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-[#F7F8FC] font-inter">
+
+<section class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white w-full max-w-6xl rounded-lg shadow-sm overflow-hidden">
+
+        <div class="grid lg:grid-cols-[2fr_1fr]">
+
+            <!-- LEFT SIDE -->
+            <div class="p-8 lg:p-10">
+
+                <!-- Logo -->
+                <img
+                    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png"
+                    alt="HRFlow Africa"
+                    class="w-40 mb-8"
+                />
+
+                <!-- Heading -->
+                <h1 class="font-jakarta text-[32px] font-semibold text-[#1F2937] mb-2">
+                    Upload Required Documents
+                </h1>
+
+                <p class="font-inter text-sm text-[#6B7280] mb-8">
+                    Drag and drop documents
+                </p>
+
+                <!-- Document Cards -->
+                <div class="grid md:grid-cols-2 gap-12">
+
+                    <!-- Government ID -->
+                    <div class="border border-[#3856D6] rounded-lg p-5 cursor-pointer hover:border-blue-500 transition flex gap-6">
+                        <div class="w-16 h-16 rounded flex items-center justify-center mb-4">
+                            <img 
+                            src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780660205/Frame_372_uprhsu.png" 
+                            alt="gov id">
+                        </div>
+                        <div>
+                            <h3 class="font-jakarta text-md font-semibold text-[#111827]">
+                            Government ID
+                        </h3>
+
+                        <p class="font-inter text-xs text-[#6B7280] mt-2">
+                            Upload permit or ID card/passport
+                        </p>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Resume -->
+                    <div class="border border-[#3856D6] rounded-lg p-5 cursor-pointer hover:border-blue-500 transition flex gap-6">
+                        <div class="w-16 h-16 bg-[#F3F4F6] rounded flex items-center justify-center mb-4">
+                            <img 
+                            src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780660205/Frame_372_uprhsu.png" 
+                            alt="resume">
+                        </div>
+
+                        <div>
+                            <h3 class="font-jakarta text-md font-semibold text-[#111827]">
+                            Resume/CV
+                        </h3>
+
+                        <p class="font-inter text-xs text-[#6B7280] mt-2">
+                            Upload your Resume
+                        </p>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Certificates -->
+                    <div class="border border-[#3856D6] rounded-lg p-5 cursor-pointer hover:border-blue-500 transition flex gap-6">
+                        <div class="w-16 h-16 bg-[#F3F4F6] rounded flex items-center justify-center mb-4">
+                            <img 
+                            src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780660205/Frame_372_1_ppjqff.png" 
+                            alt="certificate">
+                        </div>
+                        <div>
+                            <h3 class="font-jakarta text-md font-semibold text-[#111827]">
+                            Educational Certificates
+                        </h3>
+
+                        <p class="font-inter text-xs text-[#6B7280] mt-2">
+                            Upload relevant certificate
+                        </p>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Contract -->
+                    <div class="border border-[#3856D6] rounded-lg p-5 cursor-pointer hover:border-blue-500 transition flex gap-6">
+                        <div class="w-16 h-16 bg-[#F3F4F6] rounded flex items-center justify-center mb-4">
+                           <img 
+                            src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780660205/Frame_372_2_hrdwpv.png" 
+                            alt="certificate">
+                            
+                        </div>
+
+                        <div>
+                            <h3 class="font-jakarta text-md font-semibold text-[#111827]">
+                            Signed Contract
+                        </h3>
+
+                        <p class="font-inter text-xs text-[#6B7280] mt-2">
+                            Upload signed contract
+                        </p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex gap-4 mt-10">
+
+                    <button
+                        id="backBtn"
+                        class="w-40 h-12 border border-[#D1D5DB] rounded-lg font-jakarta font-medium"
+                    >
+                        Back
+                    </button>
+
+                    <button
+                        id="continueBtn"
+                        class="w-72 h-12 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-lg font-jakarta font-medium transition"
+                    >
+                        Save & Continue
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="bg-[#eeeeee] border-l flex items-center justify-center p-8">
+
+                <div
+                    class="border-4 border-dashed border-[#3856D6] rounded-xl w-full max-w-[300px] h-[260px] flex flex-col items-center justify-center text-center p-6"
+                >
+
+                    <div class="text-4xl mb-4">
+                        <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780660204/material-symbols_upload-sharp_huup8b.png" alt="">
+                    </div>
+
+                    <p class="font-jakarta font-medium text-[#374151]">
+                        Drag and drop files here
+                    </p>
+
+                    <p class="font-inter text-[#6B7280]">
+                        or browse your device
+                    </p>
+
+                    <p class="font-inter text-xs text-[#9CA3AF] mt-4">
+                        Accepted formats: PDF, JPG, PNG
+                    </p>
+
+                    <p class="font-inter text-xs text-[#9CA3AF]">
+                        Max file size: 10MB
+                    </p>
+
+                    <input
+                        type="file"
+                        id="documentUpload"
+                        class="hidden"
+                    />
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    document
+        .getElementById("backBtn")
+        .addEventListener("click", () => {
+            history.back();
+        });
+
+    document
+        .getElementById("continueBtn")
+        .addEventListener("click", () => {
+            window.location.href = "success.html";
+        });
+</script>
+
+</body>
+</html>

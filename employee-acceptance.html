@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Acceptance</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+                inter: ['Inter', 'sans-serif'],
+                jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-[#F7F8FC] min-h-screen flex items-center justify-center p-6">
+
+  <!-- CARD -->
+  <div class="w-full max-w-5xl bg-white rounded-lg shadow-sm">
+
+    <div class="flex flex-col items-center justify-center py-8 px-8">
+
+      <!-- LOGO -->
+      <img
+        src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png"
+        alt="HRFlow Africa"
+        class="w-40 mb-12 self-center lg:self-start ml-16 mt-10"
+      />
+
+      <!-- SUCCESS IMAGE -->
+      <img
+        src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780537626/Image_5_vnp2cz.png"
+        alt="invitation"
+        class="w-full max-w-[450px] mb-6"
+      />
+
+      <!-- HEADING -->
+      <h1
+        class="font-jakarta text-3xl font-bold text-[#343A40] text-center mb-4"
+      >
+        Hi!
+      </h1>
+
+      <!-- SUBTEXT -->
+      <p
+        class="w-[380px] font-inter text-xl text-[#6C757D] text-center mb-12"
+      >
+        Your Organization  has invited  you to 
+join their workspace and get started 
+with your onboarding.
+      </p>
+
+      <!-- BUTTON -->
+      <button
+        id="dashboardBtn"
+        class="bg-[#3856D6] hover:bg-[#2F49BA] text-white font-jakarta font-semibold px-24 py-4 rounded-lg transition-all duration-300"
+      >
+        Accept Invitation
+      </button>
+
+    </div>
+
+  </div>
+
+  <script>
+    const dashboardBtn = document.getElementById("dashboardBtn");
+
+    dashboardBtn?.addEventListener("click", () => {
+      window.location.href = "employee-password.html";
+    });
+  </script>
+
+</body>
+</html>

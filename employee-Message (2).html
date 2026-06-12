@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Employee Message</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<script>
+			tailwind = {
+				config: {
+					theme: {
+						extend: {
+							fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }
+						}
+					}
+				}
+			}
+		</script>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-[#F7F8FC]">
+		<div class="flex min-h-screen">
+
+		<!-- SIDEBAR -->
+		<aside
+			id="sidebar"
+			class="fixed lg:relative 
+			z-50 
+			min-h-screen 
+			w-[280px] 
+			bg-[#E7F0FF] 
+			border-r border-gray-200 
+			transition-transform duration-300
+			-translate-x-full
+			flex flex-col justify-between
+			lg:translate-x-0 
+			font-jakarta text-md font-semibold
+			"
+		>
+
+			<!-- LOGO -->
+			<div class="px-6 py-4">
+				<img
+					src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png"
+					alt="HRFlow Africa"
+					class="w-[180px]"
+				>
+			</div>
+
+			
+			<!-- NAVIGATION -->
+			<nav class="px-4 space-y-2 space-x-6 font-jakarta">
+
+				<!-- dashboard -->
+				<a
+			href="employee-dashboard.html"
+			class="group flex items-center gap-4 px-10 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			<img
+				src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Dashboard_button_bxsf4e.png"
+				alt="Dashboard"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>Dashboard</span>
+			</a>
+
+				<!-- directory -->
+				<a
+			href="employee-myprofile.html"
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			<img
+				src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407708/Icon_2_hs0hvr.png"
+				alt="Directory"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>My Profile</span>
+			</a>
+
+				<!-- recruitment -->
+				<a
+			href="employee-attendance.html"
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			
+			<img
+				src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780408183/Container_2_egkx1n.png"
+				alt="Attendance"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+			<span>Attendance</span>
+			</a>
+
+				<!-- attendance -->
+				<a
+			href="#"
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			<img
+				src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407708/Icon_3_ycnezx.png"
+				alt="Recruitment"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>Leave Request</span>
+			</a>
+
+				<!-- leave -->
+				<a
+			href="#"
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			<img
+				src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_ax5qwf.png"
+				alt="Payroll"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>Payroll</span>
+			</a>
+				
+				<!-- payroll -->
+				<a
+			href="#"
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			<img
+				src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780856331/arrow-trend-up-solid_odkebc.svg"
+				alt="Leave"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>Performance</span>
+			</a>
+
+				<!-- analytics -->
+			<a
+			href="employee-Message (2).html"
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			<img
+				src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851275/envelope-regular_yksk25.svg"
+				alt="Analytics"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>Messages</span>
+			</a>
+
+
+					<!-- roles and permission -->
+			<a
+			href="employee-notification.html"
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			<img
+				src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851138/bell-regular_g7ykmz.svg"
+				alt="Roles"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>Notifications</span>
+			</a>
+
+			<!-- divider -->
+			<!-- <div class="border-t border-[#D8DEE9] my-4"></div> -->
+
+				<!-- settings -->
+				 <a
+			href="employee-settings.html"
+			class="flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+			>
+			<img
+				src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_1_qfhnrd.png"
+				alt="Settings"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>Settings</span>
+			</a>
+				
+			</nav>
+
+			<!-- BOTTOM -->
+			
+			<!-- divider -->
+			
+
+			<div class="mx-auto w-full px-4 mt-6">
+			
+				<div class="border-t border-[grey]"></div>
+				<!-- Help center -->
+				 <button
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300 w-full text-sm mt-10"
+			>
+			<img
+				src="circle-question-regular.svg"
+				alt="Logout"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+			/>
+
+			<span>Help Center</span>
+			</button>
+					<!-- logout -->
+			<button
+			id="logoutBtn"
+			class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300 w-full text-sm"
+			>
+			<img
+				src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407800/Group_qlqzro.png"
+				alt="Logout"
+				class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert border-[#FA5252]"
+			/>
+
+			<span>Sign Out</span>
+			</button>
+			
+			
+
+			</div>
+			
+		</aside>
+
+		<div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40 lg:hidden"></div>
+
+		<div class="flex-1 flex flex-col min-h-0">
+			<!-- Top navbar spanning Main + Resources -->
+			<div class="sticky top-0 z-30 bg-white border-b border-r border-gray-100">
+			<div class="max-w-full mx-0 px-6 py-0.5 flex items-center justify-between">
+				<div class="flex-1 max-w-[30%] flex items-center gap-3 bg-[#E7F0FF] rounded-[20px] px-2 py-1">
+                    <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1781010357/magnifying-glass-solid_la9vxj.svg" width="20" height="20" alt="Search" class="z-10">
+					<input type="search" placeholder="Search messages.." class="flex-1 px-3 py-1 text-sm border-none rounded-none bg-[transparent] -z-1 focus:outline-none focus:ring-0" />
+				</div>
+					<div class="flex items-center gap-3 ml-4">
+				<button class="p-1 rounded-md hover:bg-gray-100">
+					<img src="bell-regular.svg" class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+						<path d="M15 17h5l-1.405-1.405" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					</svg>
+				</button>
+				<button class="p-1 rounded-md hover:bg-gray-100">
+					<img src="envelope-regular.svg" class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+						<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					</svg>
+				</button>
+				<button class="p-1 rounded-md hover:bg-gray-100">
+					<img src="box-solid.svg" class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+						<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					</svg>
+				</button>
+				<div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Info Container below navbar -->
+			<div class="bg-white border-b border-r border-gray-100 px-6 py-1 relative">
+				<div class="grid grid-cols-3 gap-3">
+					<img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851127/arrow-left-solid_ol4kgn.svg" alt="" class="w-3 h-3 stroke-blue-400 fill-blue-600 absolute top-0 left-0">
+				<!-- Column 1: Conversation -->
+				<div class="flex items-center space-x-28">
+					<span class="text-2xl font-semibold">Conversation</span>
+					<div class="flex-shrink-0 w-9 h-9 rounded-lg bg-[#3856D6] flex items-center justify-center">
+						<svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+							<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+						</svg>
+					</div>
+				</div>
+
+				<!-- Column 2: Design details + avatars -->
+				<div class="flex items-center gap-3">
+					<div class="flex items-center h-full">
+						<span class="text-2xl font-bold text-gray-400">#</span>
+					</div>
+					<div class="flex-1">
+						<h3 class="text-lg font-semibold mb-0">Design-System</h3>
+						<p class="text-xs text-gray-500">Collaborate on UI mockups and design systems.</p>
+					</div>
+					<div class="flex items-center -space-x-2">
+						<div class="w-8 h-8 rounded-full bg-red-400 border-2 border-white"></div>
+						<div class="w-8 h-8 rounded-full bg-purple-400 border-2 border-white"></div>
+						<div class="relative w-8 h-8 rounded-full bg-blue-400 border-2 border-white flex items-center justify-center text-white text-[10px] font-semibold">
+							<span>+12</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Column 3: Channel Resources -->
+				<div class="flex items-center gap-2 justify-end">
+					<svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+						<circle cx="12" cy="12" r="10" stroke-width="2"/>
+						<path d="M12 8v4m0 4h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					</svg>
+					<span class="text-sm font-semibold">Channel Resources</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Column 2: Main Chat -->
+		<main class="flex-1 bg-gray-50 flex flex-col min-h-0">
+			<div class="flex-1 flex min-h-0 gap-0">
+				<!-- Conversations list - Column 1 -->
+				<section class="w-80 border-r border-gray-100 overflow-auto p-2 min-h-0 bg-white">
+					<div class="mb-4">
+						<h4 class="text-xs font-semibold text-gray-500 uppercase">Team Channels</h4>
+						<ul class="mt-2 space-y-2">
+							<li class="px-3 py-2 rounded-lg hover:bg-[#E7F0FF] hover:text-[#3856D6] flex items-center gap-3 transition-all duration-[200ms]">
+								<div class="w-8 h-8 bg-transparent text-blue-700 rounded-md flex items-center justify-center">
+							<h1 class="text-[#212529] hover:text-[#3856D6]">#</h1>
+						</div>
+								<div class="group w-full flex justify-between items-center cursor-pointer relative">
+									<div class="text-lg font-medium"> Product</div>
+									<div class="hidden  group-hover:block bg-[#3856D6] text-black p-2 rounded-full"></div>
+								</div>
+							</li>
+							<li class="px-3 py-2 rounded-lg hover:bg-[#E7F0FF] hover:text-[#3856D6] flex items-center gap-3 transition-all duration-[200ms]">
+								<div class="w-8 h-8 bg-transparent text-green-700 rounded-md flex items-center justify-center ">
+							<h1>#</h1>
+						</div>
+								<div class="group w-full flex justify-between items-center cursor-pointer relative">
+									<div class="text-sm font-medium">Design</div>
+									<div class="hidden  group-hover:block bg-[#3856D6] text-black p-2 rounded-full"></div>
+								</div>
+							</li>
+						<li class="px-3 py-2 rounded-lg hover:bg-[#E7F0FF] hover:text-[#3856D6] flex items-center gap-3 transition-all duration-[200ms]">
+							<div class="w-8 h-8 bg-gray-100 text-gray-700 rounded-md flex items-center justify-center">
+							<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+								<rect x="6" y="11" width="12" height="8" rx="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+								<path d="M8 11V8a4 4 0 018 0v3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+							</svg>
+						</div>
+							<div class="group w-full flex justify-between items-center cursor-pointer relative">
+								<div class="text-sm font-medium"># hr-confidential</div>
+								<div class="hidden  group-hover:block bg-[#3856D6] text-black p-2 rounded-full"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="text-xs font-semibold text-gray-500 uppercase">Direct Messages</h4>
+					<ul class="mt-2 space-y-2">
+						<li class="px-3 py-2 rounded-lg hover:bg-gray-50 flex items-center gap-3">
+							<div class="w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center">AL</div>
+							<div class="flex-1">
+								<div class="text-sm font-medium">Olamilekan smart</div>
+								<div class="text-xs text-gray-400">Sound good, let's review...</div>
+							</div>
+						</li>
+						<li class="px-3 py-2 rounded-lg hover:bg-gray-50 flex items-center gap-3 bg-gray-50">
+							<div class="w-8 h-8 bg-gray-200 text-gray-700 rounded-full flex items-center justify-center relative"><div class="absolute w-2 h-2 rounded-full bg-[#6c757D] -bottom-0 -right-0 border-2 border-white"></div>TM</div>
+							<div class="flex-1">
+								<div class="text-sm font-medium">Lawrence Success</div>
+								<div class="text-xs text-gray-400">Is the API ready yet?</div>
+							</div>
+						</li>
+
+						<li class="px-3 py-2 rounded-lg hover:bg-gray-50 flex items-center gap-3 bg-gray-50">
+							<div class="w-8 h-8 bg-gray-200 text-gray-700 rounded-full flex items-center justify-center relative"><div class="absolute w-2 h-2 rounded-full bg-[#12B880] -bottom-0 -right-0 border-2 border-white"></div>TM</div>
+							<div class="flex-1">
+								<div class="text-sm font-medium"><h2>Lydia Walters</h2></div>
+								<div class="text-xs text-gray-400">Shared 2 FIles</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			
+			<!-- Chat area - Column 2 -->
+			<section class="flex-1 p-3 flex flex-col min-h-0 overflow-auto bg-white">
+					<div class="mb-2 flex items-center justify-between">
+						<div class="flex items-center gap-2">
+							<div class="w-7 h-7 rounded-full bg-gray-200"></div>
+							<div>
+								<div class="text-sm font-semibold">Alice Lee</div>
+								<div class="text-xs text-gray-400">Online</div>
+							</div>
+						</div>
+						<div class="text-xs text-gray-400">Last seen 2m</div>
+					</div>
+			<div class="flex items-center gap-3 mb-3 mt-1">
+							<div class="flex-1 h-px bg-gray-200"></div>
+							<span class="text-xs text-gray-400 font-medium">Today</span>
+							<div class="flex-1 h-px bg-gray-200"></div>
+						</div>
+
+						<div class="flex-1 overflow-hidden space-y-2 pb-2">
+							<!-- incoming message -->
+							<div class="flex items-start gap-3">
+								<div class="w-8 h-6 rounded-full bg-gray-300 flex items-center justify-center text-sm p-4">AL</div>
+								<div>
+									<h2>Olamilekan Smart</h2>
+									<div class="bg-[transparent] text-gray-800 px-4 py-2 rounded-lg rounded-tl-none max-w-[70%] border border-gray-200">
+										Hi! Are you available for a quick sync about the product specs?
+									</div>
+									<div class="bg-[transparent] text-gray-800 px-4 py-2 rounded-lg rounded-tl-none max-w-[70%] border border-gray-200 mt-4">
+										Sending the updated Tailwind config and product specs now.
+									</div>
+								</div>
+							</div>
+
+							<!-- outgoing message -->
+							<div class="flex items-start gap-3 justify-end">
+								<div class="flex flex-col items-end">
+									<h2 class="font-semibold">Emeka Charles</h2>
+									<div>
+										<div class="bg-blue-600 text-white px-4 py-2 rounded-lg rounded-tr-none max-w-[70%]">
+											Sure — give me 10 minutes.
+										</div>
+									</div>
+								</div>
+								<div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-sm text-white">ME</div>
+							</div>
+
+							<div class="flex items-start gap-3">
+								<div class="w-8 h-6 rounded-full bg-gray-300 flex items-center justify-center text-sm p-4">
+									<img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780912067/paperclip-solid_gvwnum.svg" alt="" class="w-4 h-4 object-contain">
+								</div>
+								<div>
+									<div class="bg-[transparent] text-gray-800 px-6 py-2 rounded-lg rounded-tl-none min-w-[90%] border border-gray-200 flex justify-between items-center">
+										<div class="w-8 h-8 p-2 bg-red-50 rounded-lg flex items-center justify-center z-10 mr-4">
+											<img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780913509/file-lines-regular_ffxauu.svg" alt="" class="w-4 h-4 object-contain">
+										</div>
+
+
+										<div class="flex-1"> <h3 class="font-semibold">Spacing_Spec_v2.pdf</h3>
+											<div class="text-xs text-gray-400 flex gap-1 items-center"><h4>12MB</h4> <div class="w-1 h-1 rounded-full bg-gray-400"></div> <h4>PDF</h4></div>
+										</div>
+
+
+										<div class="ml-4"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780914278/download-solid_uhvnag.svg" alt="" class="w-4 h-4 cursor-pointer"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					<form class="mt-2 pt-2 border-t border-gray-100 flex items-center gap-2 bg-[#F8F9FC] p-4 rounded-lg flex flex-col">
+						<input type="text" placeholder="Write a message..." class="flex-1 px-3 py-1 text-sm border border-gray-200 rounded-lg focus:outline-none " />
+						<div class="flex m-2 gap-8 rounded-lg items-center border p-4 w-full">
+							<div class="w-6 h-6"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780915671/circle-plus-solid_oq1urw.svg" alt="" class="w-4 h-4"></div>
+							<div class="w-6 h-6"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780915732/face-smile-regular_b0u8jp.svg" alt="" class="w-4 h-4"></div>
+							<div class="w-6 h-6"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780915648/at-solid_c0gwzz.svg" alt="" class="w-4 h-4"></div>
+
+							<div class="w-0.5 h-8 bg-[#6c757D]"></div>
+
+							<div class="w-6 h-6"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780915721/letter-a_mjfqbn.png" alt="" class="w-4 h-4"></div>
+
+							<button class="bg-blue-600 text-white px-3 py-1 text-sm rounded-lg">Send</button>
+						</div>
+					</form>
+			</section>
+			
+			<!-- Column 3: Resources -->
+			<aside class="w-80 bg-white border-l border-gray-100 overflow-auto p-4">
+				<div class="flex justify-between items-center w-full mb-4">
+					<h3 class="text-sm font-semibold">Shared Files(24)</h3>
+					<h4 class="font-semibold text-[#3856D6] text-xs rounded-2xl cursor-pointer p-2 hover:bg-[#F8F9FC]">View All</h4>
+				</div>
+				<ul class="space-y-3 mb-6">
+					<li class="flex items-center gap-3 bg-white p-3 rounded-lg border border-gray-200">
+						<div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-md flex items-center justify-center"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780864147/image-regular_nbemaw.svg" alt="" class="w-4 h-4"></div>
+						<div class="flex-1">
+							<div class="text-sm font-medium">Nav_Component_Mobile.png</div>
+							<div class=" flex gap-2 items-center text-xs text-gray-400"><h6>Shared by Sarah</h6> <div class="w-1 h-1 rounded-full bg-[#6c757D] my-auto"></div> <h6>Oct 22</h6></div>
+						</div>
+					</li>
+					<li class="flex items-center gap-3 bg-white p-3 rounded-lg border border-gray-200">
+						<div class="w-8 h-8 bg-green-50 text-green-600 rounded-md flex items-center justify-center">CSV</div>
+						<div class="flex-1">
+							<div class="text-sm font-medium">Component_Audit.csv</div>
+							<div class=" flex gap-2 items-center text-xs text-gray-400"><h6>Shared by Sarah</h6> <div class="w-1 h-1 rounded-full bg-[#6c757D]"></div> <h6>Oct 22</h6></div>
+						</div>
+						
+					</li>
+				</ul>
+
+				<h3 class="text-sm font-semibold mb-3">Shared Links</h3>
+				<div class="space-y-3">
+					<a class="block bg-white p-3 rounded-lg border border-gray-200 hover:shadow" href="#">
+						<div class="text-base font-semibold text-[#3856D6]">Tailwind Configuration Document</div>
+						<p class="text-xs text-gray-500 mt-1 leading-5">Office Documentation for custome theme.</p>
+						<div class="text-xs text-gray-400">TailwindCSS.com</div>
+					</a>
+					<a class="block bg-white p-3 rounded-lg border border-gray-200 hover:shadow" href="#">
+						<div class="text-base font-semibold text-[#3856D6]">Product Specs- Q4</div>
+						<p class="text-xs text-gray-500 mt-1 leading-5">Detailed break-down of the self-service features</p>
+						<div class="text-xs text-gray-400">Notion.SO/Enterprise</div>
+					</a>
+				</div>
+			</aside>
+
+		</div>
+		</div>
+
+
+
+
+
+
+<script>
+const logoutBtn = document.getElementById("logoutBtn");
+
+logoutBtn?.addEventListener("click", () => {
+    const confirmLogout = confirm(
+        "Are you sure you want to sign out?"
+    );
+
+    if (confirmLogout) {
+        window.location.href = "employee-welcome.html";
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#FFFFFF]">
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden transition-opacity duration-300 opacity-0"></div>
+
+    <div class="flex min-h-screen">
+        <div id="sidebar" class="fixed lg:relative z-50 min-h-screen w-[280px] bg-[#E7F0FF] border-r border-gray-200 transition-transform duration-300 -translate-x-full flex flex-col lg:translate-x-0 font-semibold text-md">
+            <div class="px-6 py-4 flex items-center justify-between">
+                <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png" alt="HRFlow Africa" class="w-[180px]">
+                <button id="close-sidebar-btn" class="lg:hidden p-1 text-gray-500 hover:bg-blue-100 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <nav id="sidebar-nav" class="px-4 my-8 space-y-4">
+                <a href="employee-dashboard.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Dashboard_button_bxsf4e.png" alt="Dashboard" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="employee-myprofile.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_5_tmwf80.png" alt="profile" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>My Profile</span>
+                </a>
+
+                <a href="employee-attendance.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_6_rrglun.png" alt="attendance" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Attendance</span>
+                </a>
+
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Icon_1_gyfkwz.png" alt="leave request" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Leave Request</span>
+                </a>
+
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_7_uyc4vn.png" alt="payroll" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Payroll</span>
+                </a>
+                    
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_8_v4v39d.png" alt="Performance" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Performance</span>
+                </a>
+
+                <a href="employee-Message (2).html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_9_eyking.png" alt="messages" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Messages</span>
+                </a>
+
+                <a href="employee-notification.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442410/Container_10_j8n9fv.png" alt="notifications" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Notifications</span>
+                </a>
+
+                <a href="employee-settings.html" class="flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_1_qfhnrd.png" alt="Settings" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="flex-1 min-h-screen">
+            <header class="bg-white border border-gray-200 px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <button id="menu-toggle-btn" class="lg:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        </button>
+                        <h2 class="text-xl font-semibold text-[#3856D6]">HRFlow Africa</h2>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden sm:block">
+                            <input
+                                type="text"
+                                placeholder="Search resources..."
+                                class="w-64 pl-10 pr-4 py-2 bg-gray-100 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+
+                        <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+                            <img alt="notification" src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780527406/Container_5_da9sea.png">
+                        </button>
+
+                        <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+                            <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442410/Icon_xtfkvs.png" alt="message">
+                        </button>
+
+                        <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+                            <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442408/Container_cpdmbv.png" alt="calendar">
+                        </button>
+
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780527406/Frame_2_kpls9v.png" alt="Profile" class="w-8 h-8 rounded-full object-cover"/>
+                    </div>
+                </div>
+            </header>
+
+            <main class="p-6">
+                <button class="text-gray-500 hover:text-gray-700 mb-4">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780520581/Button_dmtsns.png" alt="back">
+                </button>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                    
+                    <div class="lg:col-span-2 bg-white p-6 rounded-xl border border-gray-200">
+                        <div class="flex items-start gap-4">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780615352/image_3_moji5a.png" alt="avatar" class="w-20 h-20 rounded-xl object-cover"/>
+                                <span class="absolute bottom-1 right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></span>
+                            </div>
+                            
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h1 class="text-2xl font-bold text-gray-900">Emeka Charles</h1>
+                                        <p class="text-[#3856D6]">Senior Product Designer</p>
+                                        <div class="flex flex-wrap gap-2 mt-3">
+                                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                                                <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614545/Container_8_s4g5kc.png" alt="tag">
+                                                Design Operations
+                                            </span>
+                                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                                                <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614545/Icon_jo9kag.png" alt="location">
+                                                London HQ
+                                            </span>
+                                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                                Active
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <button class="action-btn inline-flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">
+                                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780615570/Icon_5_f34inx.png" alt="edit">
+                                        Edit Profile
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-[#3856D6] text-white p-4 rounded-xl">
+                            <p class="text-xs opacity-80 mb-1 tracking-wider font-bold">EMPLOYEE ID</p>
+                            <div class="flex items-center justify-between">
+                                <p class="text-2xl font-bold tracking-tight">EMP-489201</p>
+                                <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614545/Icon_1_dldezy.png" alt="id badge">
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+                            <p class="text-xs text-gray-500 mb-2 font-bold tracking-wider">REPORTS TO</p>
+                            <div class="flex items-center gap-3">
+                                <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780615124/Background_Border_sgqlox.png" alt="manager avatar" class="w-10 h-10 rounded-full"/>
+                                <div>
+                                    <p class="font-bold text-gray-900">Omojeni Opeyemi</p>
+                                    <p class="text-sm text-gray-600">VP of Engineering</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-bold tracking-wider text-gray-900 text-sm">PERSONAL INFO</h3>
+                                <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614545/Container_9_akcfuj.png" alt="info menu">
+                            </div>
+                            <div class="space-y-4 text-sm">
+                                <div>
+                                    <p class="text-xs text-gray-400 font-bold tracking-wider">FULL NAME</p>
+                                    <p class="text-gray-900 font-medium text-base">Emeka Charles Gideon</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-bold tracking-wider">DATE OF BIRTH</p>
+                                    <p class="text-gray-900 font-medium text-base">May 14, 1992</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-bold tracking-wider">GENDER</p>
+                                    <p class="text-gray-900 font-medium text-base">Male</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-bold tracking-wider">NATIONALITY</p>
+                                    <p class="text-gray-900 font-medium text-base">Nigerian</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl border border-gray-200">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-bold tracking-wider text-gray-900 text-sm">CONTACT</h3>
+                                <button class="action-btn text-sm text-blue-600 hover:text-blue-700 font-medium">Update</button>
+                            </div>
+                            <div class="space-y-4 text-sm">
+                                <div class="flex items-start gap-3">
+                                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614544/Icon_2_bsom2g.png" alt="email icon" class="mt-1">
+                                    <div>
+                                        <p class="text-xs text-gray-400 font-bold tracking-wider">WORK EMAIL</p>
+                                        <p class="text-gray-900 font-medium text-base">g.emekacharl@hrfa.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614544/Icon_3_hvb5xt.png" alt="phone icon" class="mt-1">
+                                    <div>
+                                        <p class="text-xs text-gray-400 font-bold tracking-wider">PHONE</p>
+                                        <p class="text-gray-900 font-medium text-base">+234 702 2345 334</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614544/Icon_4_gi5kjl.png" alt="address icon" class="mt-1">
+                                    <div>
+                                        <p class="text-xs text-gray-400 font-bold tracking-wider">ADDRESS</p>
+                                        <p class="text-gray-900 font-medium text-base leading-relaxed">22 Baker Street, Mainland<br/>London, NW1 6XE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl border border-gray-200">
+                            <h3 class="font-bold tracking-wider text-gray-900 text-sm mb-4">EMERGENCY CONTACT</h3>
+                            <div class="bg-gray-50 p-4 rounded-xl flex items-center gap-3 border border-gray-100">
+                                <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614544/Overlay_1_r7zqto.png" alt="emergency contact icon" class="w-10 h-10 rounded-full"/>
+                                <div>
+                                    <p class="font-bold text-gray-900 text-base">Eunice Charles</p>
+                                    <p class="text-sm text-gray-500">Spouse • +234 800 900 456</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200">
+                            <h3 class="font-bold tracking-wider text-gray-900 text-sm mb-4">SKILLS & CERTIFICATIONS</h3>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-4 py-1.5 bg-blue-50 text-[#3856D6] rounded-lg text-sm font-medium">UI/UX Design</span>
+                                <span class="px-4 py-1.5 bg-blue-50 text-[#3856D6] rounded-lg text-sm font-medium">Design Systems</span>
+                                <span class="px-4 py-1.5 bg-blue-50 text-[#3856D6] rounded-lg text-sm font-medium">Figma Advanced</span>
+                                <span class="px-4 py-1.5 bg-blue-50 text-[#3856D6] rounded-lg text-sm font-medium">React.js</span>
+                                <span class="px-4 py-1.5 bg-blue-50 text-[#3856D6] rounded-lg text-sm font-medium">User Research</span>
+                                <span class="px-4 py-1.5 bg-blue-50 text-[#3856D6] rounded-lg text-sm font-medium">Agile Methodology</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="border border-gray-200 rounded-xl p-4 flex flex-col justify-between">
+                                    <div class="flex items-start gap-2 mb-2">
+                                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614545/Container_10_bfn0lw.png" alt="medal" class="mt-0.5">
+                                        <p class="font-bold text-gray-900 text-sm leading-snug">Google UX Design Certificate</p>
+                                    </div>
+                                    <p class="text-xs text-gray-400 pl-7">Verified 2023</p>
+                                </div>
+                                <div class="border border-gray-200 rounded-xl p-4 flex flex-col justify-between">
+                                    <div class="flex items-start gap-2 mb-2">
+                                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614545/Container_10_bfn0lw.png" alt="medal" class="mt-0.5">
+                                        <p class="font-bold text-gray-900 text-sm leading-snug">AWS Cloud Practitioner</p>
+                                    </div>
+                                    <p class="text-xs text-gray-400 pl-7">Verified 2022</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl border border-gray-200">
+                            <h3 class="font-bold tracking-wider text-gray-900 text-sm mb-4">CAREER PATH</h3>
+                            <div class="space-y-6 relative">
+                                <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-gray-200"></div>
+                                
+                                <div class="relative pl-8">
+                                    <div class="absolute left-0 top-1.5 w-4 h-4 bg-blue-600 rounded-full border-4 border-white ring-1 ring-blue-600"></div>
+                                    <div class="flex items-start justify-between">
+                                        <div>
+                                            <p class="font-bold text-gray-900">Senior Product Designer</p>
+                                            <p class="text-sm text-gray-500">Design Operations • Jan 2023 — Present</p>
+                                        </div>
+                                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Current Role</span>
+                                    </div>
+                                </div>
+
+                                <div class="relative pl-8">
+                                    <div class="absolute left-0 top-1.5 w-4 h-4 bg-gray-300 rounded-full border-4 border-white"></div>
+                                    <div>
+                                        <p class="font-bold text-gray-900">Product Designer</p>
+                                        <p class="text-sm text-gray-500">Core Banking Services • June 2021 — Dec 2022</p>
+                                    </div>
+                                </div>
+
+                                <div class="relative pl-8">
+                                    <div class="absolute left-0 top-1.5 w-4 h-4 bg-gray-300 rounded-full border-4 border-white"></div>
+                                    <div>
+                                        <p class="font-bold text-gray-900">Junior UI Specialist</p>
+                                        <p class="text-sm text-gray-500">Marketing & Brand • Aug 2019 — June 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <div class="p-4 border-b border-gray-200 flex items-center justify-between">
+                                <h3 class="font-bold tracking-wider text-gray-900 text-sm">COMPLIANCE DOCUMENTS</h3>
+                                <button class="action-btn inline-flex items-center gap-1 px-3 py-1.5 bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-700 rounded-lg text-sm font-semibold">
+                                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614544/Container_11_xrz2kn.png" alt="upload icon" class="mr-1">
+                                    Upload New
+                                </button>
+                            </div>
+                            <div class="divide-y divide-gray-100">
+                                <div class="p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780614544/Container_12_qhk2hh.png" alt="pdf link">
+                                        <div>
+                                            <p class="font-semibold text-gray-900 text-sm">Passport_Copy_Emeka_C.pdf</p>
+                                            <p class="text-xs text-gray-400 mt-0.5">Uploaded Oct 12, 2023 • 2.4 MB</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded bg-blue-100 flex items-center justify-center text-[#3856D6] font-bold text-xs">DOCX</div>
+                                        <div>
+                                            <p class="font-semibold text-gray-900 text-sm">Employment_Contract_2023.docx</p>
+                                            <p class="text-xs text-gray-400 mt-0.5">Uploaded Jan 05, 2023 • 1.1 MB</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded bg-amber-100 flex items-center justify-center text-amber-700 font-bold text-xs">PDF</div>
+                                        <div>
+                                            <p class="font-semibold text-gray-900 text-sm">Security_Clearance_Level2.pdf</p>
+                                            <p class="text-xs text-gray-400 mt-0.5">Uploaded Nov 20, 2023 • 4.8 MB</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-4 text-center bg-gray-50/50">
+                                    <button class="action-btn text-sm text-[#3856D6] hover:text-blue-800 font-bold">View All 12 Documents</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 1. MOBILE SIDEBAR INTERACTION LOGIC ---
+            const sidebar = document.getElementById('sidebar');
+            const backdrop = document.getElementById('sidebar-backdrop');
+            const menuToggleBtn = document.getElementById('menu-toggle-btn');
+            const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                backdrop.classList.remove('hidden');
+                setTimeout(() => {
+                    backdrop.classList.add('opacity-100');
+                }, 10);
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.remove('opacity-100');
+                setTimeout(() => {
+                    backdrop.classList.add('hidden');
+                }, 300);
+            }
+
+            if (menuToggleBtn) menuToggleBtn.addEventListener('click', openSidebar);
+            if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+            if (backdrop) backdrop.addEventListener('click', closeSidebar);
+
+
+            // --- 2. NAVIGATION ACTIVE STATE SWITCHER ---
+            const navLinks = document.querySelectorAll('#sidebar-nav a');
+            
+            // Set "My Profile" as active initially to match design
+            navLinks.forEach(link => {
+                const text = link.querySelector('span')?.textContent.trim().toLowerCase();
+                if (text === 'my profile') {
+                    link.classList.remove('text-[#343A40]');
+                    link.classList.add('bg-[#3856D6]', 'text-white');
+                    link.querySelector('img').classList.add('brightness-0', 'invert');
+                }
+
+                // Add dynamic click listeners for visual feedback
+                link.addEventListener('click', (e) => {
+                    navLinks.forEach(l => {
+                        l.classList.remove('bg-[#3856D6]', 'text-white');
+                        l.classList.add('text-[#343A40]');
+                        l.querySelector('img').classList.remove('brightness-0', 'invert');
+                    });
+                    
+                    link.classList.remove('text-[#343A40]');
+                    link.classList.add('bg-[#3856D6]', 'text-white');
+                    link.querySelector('img').classList.add('brightness-0', 'invert');
+                    
+                    // Close sidebar on mobile after clicking item
+                    if (window.innerWidth < 1024) closeSidebar();
+                });
+            });
+
+
+            // --- 3. GENERIC BUTTON INTERACTION HOOKS ---
+            const actionButtons = document.querySelectorAll('.action-btn');
+            actionButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const actionName = e.currentTarget.textContent.trim();
+                    alert(`Action triggered: "${actionName}" functionality template connected.`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

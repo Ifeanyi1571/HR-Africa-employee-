@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Splash Screen</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+                inter: ['Inter', 'sans-serif'],
+                jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-[#F7F8FC] font-jakarta">
+
+  <section class="min-h-screen flex items-center justify-center px-4 py-8">
+
+    <div
+      class="w-full max-w-6xl bg-white rounded-lg shadow-sm overflow-hidden"
+    >
+
+      <div class="grid lg:grid-cols-2">
+
+        <!-- LEFT SIDE -->
+        <div class="p-8 lg:p-16 flex flex-col">
+
+          <!-- Logo -->
+          <img
+            src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png"
+            alt="HRFlow Africa"
+            class="w-40 mx-auto lg:mx-0 -mt-8"
+          />
+
+          <!-- Content -->
+          <div class="flex-1 flex flex-col">
+
+            <div class="text-center mt-12 lg:mt-28">
+  <h1 class="text-4xl font-bold">
+    Your Journey
+  </h1>
+
+  <h2 class="text-4xl font-bold text-[#3B82F6]">
+    starts here.
+  </h2>
+
+  <p class="mt-4 text-sm text-gray-500 max-w-[350px] mx-auto mb-8">
+    We are preparing your HR workspace so you can manage
+    people, processes and performances with ease.
+  </p>
+</div>
+
+            <!-- Progress Section -->
+            <div class="mt-12 mb-8 w-[300px] mx-auto">
+
+              <div
+                class="flex justify-between text-sm text-gray-600 mb-2"
+              >
+                <span>Preparing your workspace.....</span>
+                <span id="percentage">65%</span>
+              </div>
+
+              <div
+                class="w-full h-2 bg-gray-200 rounded-full overflow-hidden"
+              >
+                <div
+                  id="progressBar"
+                  class="h-full bg-blue-600 rounded-full transition-all duration-300"
+                  style="width:65%"
+                ></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div
+          class="hidden lg:flex items-center border-l justify-center"
+        >
+          <img
+            src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780537180/Image_4_ips1wh.png"
+            alt="Employee Splash"
+            class="hidden lg:block w-full max-h-[550px] "
+          />
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    let progress = 65;
+
+    const progressBar = document.getElementById("progressBar");
+    const percentage = document.getElementById("percentage");
+
+    const interval = setInterval(() => {
+      progress++;
+
+      progressBar.style.width = progress + "%";
+      percentage.textContent = progress + "%";
+
+      if (progress >= 100) {
+        clearInterval(interval);
+
+        setTimeout(() => {
+        //   window.location.href = "acceptance.html";
+        }, 500);
+      }
+    }, 100);
+  </script>
+
+</body>
+</html>

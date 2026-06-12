@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#FFFFFF] overflow-x-hidden">
+
+    <div id="sidebarBackdrop" class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden transition-opacity duration-300 opacity-0"></div>
+
+    <div class="flex min-h-screen">
+        <div id="sidebar" class="fixed lg:relative z-50 min-h-screen w-[280px] bg-[#E7F0FF] border-r border-gray-200 transition-transform duration-300 -translate-x-full flex flex-col lg:translate-x-0 font-semibold text-md">
+
+            <div class="px-6 py-4 flex items-center justify-between">
+                <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png" alt="HRFlow Africa" class="w-[180px]">
+                <button id="closeSidebar" class="lg:hidden p-1 text-gray-500 hover:bg-blue-100 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <p class="mx-6 my-2 text-xs text-gray-400 font-bold tracking-wider">EMPLOYEE PORTAL</p>
+            
+            <nav id="sidebarNav" class="px-4 my-2 space-y-2">
+                <a href="employee-dashboard.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Dashboard_button_bxsf4e.png" alt="Dashboard" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="employee-myprofile.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_5_tmwf80.png" alt="profile" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>My Profile</span>
+                </a>
+
+                <a href="employee-attendance.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_6_rrglun.png" alt="attendance" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Attendance</span>
+                </a>
+
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Icon_1_gyfkwz.png" alt="leave request" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Leave Request</span>
+                </a>
+
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_7_uyc4vn.png" alt="payroll" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Payroll</span>
+                </a>
+                    
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_8_v4v39d.png" alt="Performance" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Performance</span>
+                </a>
+
+                <a href="employee-Message (2).html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_9_eyking.png" alt="messages" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Messages</span>
+                </a>
+
+                <a href="employee-notification.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442410/Container_10_j8n9fv.png" alt="notifications" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Notifications</span>
+                </a>
+
+                <a href="employee-settings.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_1_qfhnrd.png" alt="Settings" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="flex-1 flex flex-col min-h-screen overflow-x-hidden">
+
+            <header id="topbar" class="h-[90px] bg-white border-b border-gray-200 px-6 lg:px-8 flex items-center justify-between">
+
+                <div class="flex items-center gap-4">
+                    <button id="menuToggle" class="lg:hidden text-2xl p-2 hover:bg-gray-100 rounded-lg focus:outline-none">
+                        ☰
+                    </button>
+
+                    <div class="hidden md:flex items-center gap-3 bg-[#F2F4F7] rounded-xl px-4 py-3 w-[350px] lg:w-[550px]">
+                        <span class="text-gray-500">
+                            <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780434723/Icon_8_jdeezs.png" alt="search">
+                        </span>
+                        <input id="searchInput" type="text" placeholder="Search tasks, payslips, or people..." class="w-full bg-transparent outline-none font-jakarta text-sm">
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-5">
+                    <button id="previewBtn" class="hover:opacity-80 transition-opacity">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442408/Container_cpdmbv.png" alt="preview">
+                    </button>
+
+                    <button id="messageBtn" class="hover:opacity-80 transition-opacity">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442410/Icon_xtfkvs.png" alt="messages">
+                    </button>
+
+                    <button id="notificationBtn" class="hover:opacity-80 transition-opacity">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442408/Button_iwuia3.png" alt="notification">
+                    </button>
+
+                    <div class="h-8 border-l border-gray-300"></div>
+
+                    <div class="hidden md:block text-right">
+                        <p class="font-inter text-sm font-semibold text-gray-900">Emeka Charles</p>
+                        <p class="font-jakarta text-xs text-gray-500">Senior Product Designer</p>
+                    </div>
+
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780443373/Charles_py9wdk.png" alt="Profile" class="w-11 h-11 rounded-full object-cover">
+                </div>
+            </header>
+
+            <main id="mainContent" class="flex-1 p-4 md:p-6 lg:p-8">
+
+                <div class="bg-[#3856d6] text-[#FFFFFF] p-6 rounded-2xl shadow-sm relative overflow-hidden">
+                    <h1 class="text-2xl md:text-3xl font-bold mb-2">Good morning, Charles</h1>
+                    <p class="mb-6 text-sm md:text-base max-w-xl opacity-90">
+                        You have 3 meetings scheduled today, and your quarterly reviews in 2 days. Ready to start your session?
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="action-btn bg-[#FFFFFF] text-[#3856D6] hover:bg-[#3856D6] font-bold hover:border hover:border-white hover:text-white transition-all duration-300 px-4 py-2 text-sm rounded-xl cursor-pointer">Complete Profile</button>
+                        <button class="action-btn bg-[#FFFFFF] text-[#3856D6] hover:bg-[#3856D6] font-bold hover:border hover:border-white hover:text-white transition-all duration-300 px-4 py-2 text-sm rounded-xl cursor-pointer">View Schedule</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+                    <button class="action-btn flex items-center gap-3 border border-gray-200 rounded-xl p-4 text-[#212529] bg-[#FFFFFF] hover:border-blue-400 hover:shadow-sm transition-all text-left">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442408/Container_2_o8jljc.png" alt="leave icon">
+                        <p class="font-bold text-sm">Request Leave</p>
+                    </button>
+
+                    <button class="action-btn flex items-center gap-3 border border-gray-200 rounded-xl p-4 text-[#212529] bg-[#FFFFFF] hover:border-blue-400 hover:shadow-sm transition-all text-left">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442408/Container_3_oxctz2.png" alt="payslip icon">
+                        <p class="font-bold text-sm">View Payslip</p>
+                    </button>
+
+                    <button id="clockInBtn" class="flex items-center gap-3 border border-transparent rounded-xl p-4 bg-[#3856D6] text-[#FFFFFF] hover:bg-blue-700 hover:shadow-md transition-all text-left">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780446567/Container_2_tvuqyy.png" alt="clock icon">
+                        <p id="clockInText" class="font-bold text-sm">Clock In</p>
+                    </button>
+
+                    <button class="action-btn flex items-center gap-3 border border-gray-200 rounded-xl p-4 text-[#212529] bg-[#FFFFFF] hover:border-blue-400 hover:shadow-sm transition-all text-left">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_4_isu88f.png" alt="profile icon">
+                        <p class="font-bold text-sm">Update Profile</p>
+                    </button>
+                </div>
+
+                <div class="bg-gray-50/50 border border-gray-100 rounded-2xl p-4 md:p-6 mt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            
+                        <div class="space-y-6">
+                            <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+                                <div class="flex items-start justify-between gap-3">
+                                    <div class="flex items-center gap-3">
+                                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780443373/Charles_py9wdk.png" alt="Profile" class="w-14 h-14 rounded-xl object-cover border">
+                                        <div>
+                                            <h3 class="font-bold text-gray-900">Emeka Charles</h3>
+                                            <p class="text-xs text-gray-500">Employee ID: ESS-8842</p>
+                                        </div>
+                                    </div>
+                                    <span class="px-2.5 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Active</span>
+                                </div>
+                                    
+                                <div class="mt-5 space-y-3 text-sm border-t border-gray-100 pt-4">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-400">Department</span>
+                                        <span class="font-medium text-gray-800 text-right">Experience Design</span>
+                                    </div>
+                                    
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-400">Tenure</span>
+                                        <span class="font-medium text-gray-800 text-right">3 Years, 4 Months</span>
+                                    </div>
+
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-400">Reports to</span>
+                                        <span class="font-bold text-[#3856D6] text-right cursor-pointer hover:underline">Rebecca Karlan</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-white">
+                                <img class="w-full h-auto object-cover" src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780443374/Performance_Score_Card_cukrn4.png" alt="Performance Card">
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-white">
+                                <img class="w-full h-auto object-cover" src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780443373/Attendance_Status_Widget_tsqt8n.png" alt="Attendance Widget">
+                            </div>
+
+                            <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="font-bold text-gray-900">Latest Payroll</h3>
+                                        <p class="text-xs text-gray-500 mt-0.5">Paid on May 01, 2026</p>
+                                    </div>
+                                    <button id="toggleSalaryView" class="p-1 text-gray-400 hover:text-gray-600 rounded-lg transition-colors text-lg">
+                                        👁
+                                    </button>
+                                </div>
+                                
+                                <p class="text-3xl font-extrabold mt-4 text-gray-900 tracking-tight">
+                                    <span id="salaryAmount">$4,250.00</span>
+                                    <span class="text-xs font-normal text-gray-400 ml-1">Net Pay</span>
+                                </p>
+                                
+                                <div class="mt-4 space-y-2.5 text-sm border-t border-gray-100 pt-4">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-400">Gross Salary</span>
+                                        <span id="grossAmount" class="font-medium text-gray-700">$5,800.00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-400">Tax & Deductions</span>
+                                        <span id="taxAmount" class="font-bold text-red-600">-$1,550.00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-white">
+                                <img class="w-full h-auto object-cover" src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780443373/Leave_Balance_Card_jgqwxa.png" alt="Leave Balance">
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 md:col-span-2 lg:col-span-1">
+                            <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h3 class="font-bold text-gray-900">Upcoming</h3>
+                                    <button class="action-btn text-xs text-blue-600 hover:text-blue-700 font-bold">View All</button>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="border-l-4 border-blue-500 bg-blue-50/50 p-3 rounded-r-xl">
+                                        <p class="font-bold text-gray-900 text-sm">Sprint Review</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">11:00 AM - 12:30 PM</p>
+                                    </div>
+                                    <div class="border-l-4 border-amber-500 bg-amber-50/50 p-3 rounded-r-xl">
+                                        <p class="font-bold text-gray-900 text-sm">Product Team Align</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">02:00 PM - 03:00 PM</p>
+                                    </div>
+                                    <div class="border-l-4 border-purple-500 bg-purple-50/50 p-3 rounded-r-xl">
+                                        <p class="font-bold text-gray-900 text-sm">Design Handoff Session</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">04:30 PM - 05:15 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-white">
+                                <img class="w-full h-auto object-cover" src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780443373/Announcements_hslpk3.png" alt="Announcements">
+                            </div>
+
+                            <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-white">
+                                <img class="w-full h-auto object-cover" src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780443374/Recent_Activities_Feed_oqp45j.png" alt="Recent Activities">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. MOBILE RESPONSIVE SIDEBAR DRAWER DRAWS ---
+            const sidebar = document.getElementById('sidebar');
+            const backdrop = document.getElementById('sidebarBackdrop');
+            const menuToggle = document.getElementById('menuToggle');
+            const closeSidebar = document.getElementById('closeSidebar');
+
+            function handleOpenSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                backdrop.classList.remove('hidden');
+                setTimeout(() => {
+                    backdrop.classList.add('opacity-100');
+                }, 20);
+            }
+
+            function handleCloseSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.remove('opacity-100');
+                setTimeout(() => {
+                    backdrop.classList.add('hidden');
+                }, 300);
+            }
+
+            if (menuToggle) menuToggle.addEventListener('click', handleOpenSidebar);
+            if (closeSidebar) closeSidebar.addEventListener('click', handleCloseSidebar);
+            if (backdrop) backdrop.addEventListener('click', handleCloseSidebar);
+
+
+            // --- 2. SIDEBAR LINK ACTIVE NAVIGATION NAVIGATION ---
+            const navLinks = document.querySelectorAll('#sidebarNav a');
+            
+            // Highlight current page active selection state (e.g., Dashboard page)
+            navLinks.forEach(link => {
+                const text = link.querySelector('span')?.textContent.trim().toLowerCase();
+                if (text === 'dashboard') {
+                    link.classList.remove('text-[#343A40]');
+                    link.classList.add('bg-[#3856D6]', 'text-white');
+                    link.querySelector('img').classList.add('brightness-0', 'invert');
+                }
+
+                link.addEventListener('click', (e) => {
+                    // Reset all other links to default design state
+                    navLinks.forEach(item => {
+                        item.classList.remove('bg-[#3856D6]', 'text-white');
+                        item.classList.add('text-[#343A40]');
+                        item.querySelector('img').classList.remove('brightness-0', 'invert');
+                    });
+
+                    // Add active styles to clicked item
+                    link.classList.remove('text-[#343A40]');
+                    link.classList.add('bg-[#3856D6]', 'text-white');
+                    link.querySelector('img').classList.add('brightness-0', 'invert');
+
+                    // Smooth-close mobile sidebar drawer frame if view width is minimized
+                    if (window.innerWidth < 1024) {
+                        handleCloseSidebar();
+                    }
+                });
+            });
+
+
+            // --- 3. FUNCTIONAL CLOCK-IN CARD MODULE TRIGGER ---
+            const clockInBtn = document.getElementById('clockInBtn');
+            const clockInText = document.getElementById('clockInText');
+            let isClockedIn = false;
+
+            if (clockInBtn && clockInText) {
+                clockInBtn.addEventListener('click', () => {
+                    isClockedIn = !isClockedIn;
+                    if (isClockedIn) {
+                        clockInBtn.classList.remove('bg-[#3856D6]');
+                        clockInBtn.classList.add('bg-red-600');
+                        clockInText.textContent = 'Clock Out';
+                        alert('Success: Clocked In at ' + new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
+                    } else {
+                        clockInBtn.classList.remove('bg-red-600');
+                        clockInBtn.classList.add('bg-[#3856D6]');
+                        clockInText.textContent = 'Clock In';
+                        alert('Success: Clocked Out securely.');
+                    }
+                });
+            }
+
+
+            // --- 4. PAYROLL SALARY VISIBILITY OBFUSCATION ---
+            const toggleSalaryView = document.getElementById('toggleSalaryView');
+            const salaryAmount = document.getElementById('salaryAmount');
+            const grossAmount = document.getElementById('grossAmount');
+            const taxAmount = document.getElementById('taxAmount');
+            let payrollHidden = false;
+
+            if (toggleSalaryView && salaryAmount && grossAmount && taxAmount) {
+                toggleSalaryView.addEventListener('click', () => {
+                    payrollHidden = !payrollHidden;
+                    if (payrollHidden) {
+                        salaryAmount.textContent = '••••••';
+                        grossAmount.textContent = '••••••';
+                        taxAmount.textContent = '••••••';
+                        toggleSalaryView.textContent = '🙈';
+                    } else {
+                        salaryAmount.textContent = '$4,250.00';
+                        grossAmount.textContent = '$5,800.00';
+                        taxAmount.textContent = '-$1,550.00';
+                        toggleSalaryView.textContent = '👁';
+                    }
+                });
+            }
+
+
+            // --- 5. SEARCH INPUT BAR CONSOLE TRACKER ---
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+                        alert(`Search query execution initiated: "${searchInput.value}"`);
+                        searchInput.value = '';
+                    }
+                });
+            }
+
+
+            // --- 6. ACTION INTERACTION ALERT BINDINGS ---
+            const buttons = document.querySelectorAll('.action-btn, #previewBtn, #messageBtn, #notificationBtn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    // Prevent default anchor jumping behavior
+                    if(e.currentTarget.tagName === 'A') e.preventDefault();
+                    
+                    const label = e.currentTarget.innerText || e.currentTarget.querySelector('p')?.innerText || e.currentTarget.querySelector('img')?.alt || 'Header Feature';
+                    alert(`Action Context Called: Quick link template connecting to "${label.trim()}" processing module.`);
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

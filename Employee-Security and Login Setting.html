@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRFlow Africa - Security Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 flex">
+
+    <!-- SIDEBAR (Fixed width) -->
+    <!-- SIDEBAR -->
+  <aside
+    id="sidebar"
+    class="fixed lg:relative 
+    z-50 
+    min-h-screen 
+    w-[280px] 
+    bg-[#E7F0FF] 
+    border-r border-gray-200 
+    transition-transform duration-300
+    -translate-x-full
+    flex flex-col 
+    lg:translate-x-0 
+    font-jakarta text-md font-semibold pt-8
+    "
+  >
+
+    <!-- LOGO -->
+    <div class="px-6 py-2">
+      <img
+        src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png"
+        alt="HRFlow Africa"
+        class="w-[180px] mt-18 mx-auto"
+      >
+    </div>
+    <p class="mx-auto mt-2 mb-16">Employee Dahsboard</p>
+
+    
+    <!-- NAVIGATION -->
+    <nav class="px-4 space-y-4 space-x-6 font-jakarta mt-18">
+
+      <!-- dashboard -->
+      <a
+  href="#"
+  class="group flex items-center gap-4 px-10 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Dashboard_button_bxsf4e.png"
+    alt="Dashboard"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Dashboard</span>
+</a>
+
+     <!-- directory -->
+      <a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407708/Icon_2_hs0hvr.png"
+    alt="Directory"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span> My Profile</span>
+</a>
+
+    <!-- recruitment -->
+      <a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780854792/fingerprint-solid1_fvrni9.svg"
+    alt="Recruitment"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Attendance</span>
+</a>
+
+    <!-- attendance -->
+      <a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407800/Icon_5_esqxfl.png"
+    alt="Attendance"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Leave Request</span>
+</a>
+
+    <!-- leave -->
+    <a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_ax5qwf.png"
+    alt="Leave"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Payroll</span>
+</a>
+    
+    <!-- payroll -->
+    <a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780856331/arrow-trend-up-solid_odkebc.svg"
+    alt="Payroll"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Performance</span>
+</a>
+
+    <!-- analytics -->
+<a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851275/envelope-regular_jldjtl.svg"
+    alt="Analytics"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Messages</span>
+</a>
+
+
+        <!-- roles and permission -->
+<a
+  href="#"
+  class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/ion_people-outline_e3qrc7.png"
+    alt="Roles"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Notifications</span>
+</a>
+
+<!-- divider -->
+<!-- <div class="border-t border-[#D8DEE9] my-4"></div> -->
+
+    <!-- settings -->
+     <a
+  href="#"
+  class="flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_1_qfhnrd.png"
+    alt="Settings"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+  />
+
+  <span>Settings</span>
+</a>
+       
+    </nav>
+
+    <!-- BOTTOM -->
+  
+    <!-- divider -->
+    
+
+    <div class="mx-auto w-full px-4 mb-8">
+    
+      <div class="border-t border-[grey] mb-8"></div>
+      <!-- Help Center -->
+         <button
+  class="group flex items-center gap-4 px-4 py-2 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300 w-full text-"
+>
+  <img
+    src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851177/circle-question-regular_llozdb.svg"
+    alt="Logout"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert "
+  />
+
+  <span>Help center</span>
+</button>
+        <!-- logout -->
+    <button
+  class="group flex items-center gap-4 px-4 py-1 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300 w-full text-"
+>
+  <img
+    src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407800/Group_qlqzro.png"
+    alt="Logout"
+    class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert "
+  />
+
+  <span class="text-[#Fa5252]">Log Out</span>
+</button>
+    
+    
+      
+
+    </div>
+    
+  </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="flex-1 flex flex-col min-w-0 bg-white">
+        
+        <!-- HEADER -->
+        <header class="h-16 border-b border-gray-100 flex items-center justify-between px-8 shrink-0">
+            <div class="bg-blue-50 px-4 py-1.5 rounded-full flex items-center gap-3 w-96 border border-blue-100">
+                <span class="text-gray-400"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1781010357/magnifying-glass-solid_la9vxj.svg" alt="" class="w-4 h-4 obejct-contain"></span>
+                <input type="text" placeholder="Search security logs..." class="bg-transparent border-none focus:ring-0 text-sm w-full">
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="text-gray-400 hover:text-gray-600"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851138/bell-regular_g7ykmz.svg" alt="" class="w-4 h-4 obejct-contain"></button>
+                <button class="text-gray-400 hover:text-gray-600"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851275/envelope-regular_yksk25.svg" alt="" class="w-4 h-4 obejct-contain"></button>
+                <button class="text-gray-400 hover:text-gray-600"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851154/box-solid_mypdtl.svg" alt="" class="w-4 h-4 obejct-contain"></button>
+                <div class="w-8 h-8 rounded-full bg-gray-200 border border-gray-300"></div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD BODY -->
+        <main class="flex-1 overflow-y-auto p-8">
+            <div class="max-w-6xl mx-auto flex gap-8">
+                
+                <!-- LEFT COLUMN -->
+                <div class="flex-1 space-y-8">
+                    <div>
+                        <button class="text-[#3856D6] text-xs font-bold mb-2 flex items-center gap-1">← ACCOUNT PROTECTION</button>
+                        <h1 class="text-2xl font-bold text-gray-800">Security & Login Settings</h1>
+                        <p class="text-sm text-gray-500 mt-1">Manage your account access, active sessions, and multi-factor authentication preferences.</p>
+                    </div>
+
+                    <!-- SECURITY CARDS -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- 2FA Card -->
+                        <div class="bg-[#3856D6] text-white p-6 rounded-2xl relative overflow-hidden shadow-lg">
+                            <div class="z-10 relative">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-xl"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780936950/shield-halved-solid_bxqxem.svg" alt="" class="w-4 h-4 obejct-contain"></span>
+                                    <h3 class="font-bold text-2xl">Two-Factor <br> Authentication</h3>
+                                </div>
+                                <p class="text-xs text-blue-100 mb-6 leading-relaxed">Add an extra layer of security by requiring a code from your phone to log in.</p>
+                                <span class="bg-blue-400/30 text-[10px] px-3 py-1 rounded-full border border-blue-200/30">● Currently Enabled</span>
+                                <button class="block mt-4 bg-white text-[#3856D6] text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-50 transition">Manage 2FA Settings</button>
+                            </div>
+                            <div class="absolute -right-4 -bottom-4 opacity-10 text-9xl">🔒</div>
+                        </div>
+
+                        <!-- Password Card -->
+                        <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-xl">🔑</span>
+                                <h3 class="font-bold text-2xl text-gray-800">Password <br> Integrity</h3>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-6">Your password was last changed 4 months ago. We recommend updating every 6 months.</p>
+                            <button class="w-full py-2 border border-blue-100 bg-blue-50 text-[#3856D6] text-xs font-bold rounded-lg hover:bg-blue-100 transition">Change Password</button>
+                        </div>
+                    </div>
+
+                    <!-- ACTIVE SESSIONS -->
+                    <div>
+                        <div class="flex justify-between items-end mb-4">
+                            <h3 class="font-bold text-gray-800 flex items-center gap-2"> <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1781089261/mobile-screen-solid_sdfs6l.svg" alt="" class="w-4 h-4 obejct-contain"> Active Sessions</h3>
+                            <button class="text-red-500 text-[10px] font-bold hover:underline">Logout All Other Devices</button>
+                        </div>
+                        <div class="border border-gray-100 rounded-2xl divide-y divide-gray-50 overflow-hidden shadow-sm">
+                            <div class="p-4 flex items-center gap-4 bg-white hover:bg-gray-50 transition">
+                                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center"> <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1781089269/desktop-solid_aqrxaz.svg" alt="" class="w-4 h-4 obejct-contain"></div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm font-bold text-gray-800">Windows PC • Chrome Browser</span>
+                                        <span class="text-[10px] text-emerald-500 font-bold bg-emerald-50 px-2 py-0.5 rounded">Active now</span>
+                                    </div>
+                                    <p class="text-[10px] text-gray-400">San Francisco, USA • 192.168.1.45</p>
+                                </div>
+                                <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-1 rounded-md">Current Device</span>
+                            </div>
+                            <div class="p-4 flex items-center gap-4 bg-white hover:bg-gray-50 transition">
+                                <div class="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center"> <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1781089261/mobile-screen-solid_sdfs6l.svg" alt="" class="w-4 h-4 obejct-contain"></div>
+                                <div class="flex-1">
+                                    <span class="text-sm font-bold text-gray-800">iPhone 15 Pro • Enterprise App</span>
+                                    <p class="text-[10px] text-gray-400">San Francisco, USA • Last active 2 hours ago</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 flex items-center gap-4 bg-white hover:bg-gray-50 transition">
+                                <div class="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center"> <img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1781089250/laptop-solid_q9fx0l.svg" alt="" class="w-4 h-4 obejct-contain"></div>
+                                <div class="flex-1">
+                                    <span class="text-sm font-bold text-gray-800">Macbook Pro 16 • Enterprise App</span>
+                                    <p class="text-[10px] text-gray-400">San Francisco, USA • Last active 2 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LOGIN HISTORY -->
+                    <div>
+                        <div class="flex justify-between items-end mb-4">
+                            <h3 class="font-bold text-gray-800">Login History</h3>
+                            <button class="text-blue-600 text-[10px] font-bold hover:underline">Download CSV Log</button>
+                        </div>
+                        <table class="w-full text-left border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                            <thead class="bg-gray-50 text-[10px] text-gray-400 uppercase font-bold">
+                                <tr>
+                                    <th class="px-6 py-3">Timestamp</th>
+                                    <th class="px-6 py-3">Event</th>
+                                    <th class="px-6 py-3">Location / IP</th>
+                                    <th class="px-6 py-3">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-xs divide-y divide-gray-50">
+                                <tr class="bg-white">
+                                    <td class="px-6 py-4 font-medium">May 24, 2026<br><span class="text-gray-400">09:12 AM</span></td>
+                                    <td class="px-6 py-4">🔑 Login via Web</td>
+                                    <td class="px-6 py-4 text-gray-500">192.168.1.45 (SF, USA)</td>
+                                    <td class="px-6 py-4"><span class="text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full font-bold">Successful</span></td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <td class="px-6 py-4 font-medium">May 23, 2026<br><span class="text-gray-400">11:45 PM</span></td>
+                                  =-\\
+                                  <td class="px-6 py-4">🔄 System Timeout</td>
+                                    <td class="px-6 py-4 text-gray-500">Enterprise App (Mobile)</td>
+                                    <td class="px-6 py-4"><span class="text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-bold">Logged Out</span></td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <td class="px-6 py-4 font-medium">May 23, 2026<br><span class="text-gray-400">11:45 PM</span></td>
+                                    <td class="px-6 py-4 text-red-500"> ⚠️ Failed Login</td>
+                                    <td class="px-6 py-4 text-gray-500">E172.24.58.11 (unknown)</td>
+                                    <td class="px-6 py-4"><span class="text-[#FFFFFF] bg-red-500 px-3 py-1 rounded-full font-bold">Rejected</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN (Alerts & Score) -->
+                <div class="w-80 space-y-6">
+                    <!-- SECURITY ALERTS -->
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2"><img src="https://res.cloudinary.com/dzqpiy3o8/image/upload/q_auto/f_auto/v1780851138/bell-regular_g7ykmz.svg" alt="" class="w-4 h-4 obejct-cover"> Security Alerts</h3>
+                        <div class="space-y-4 border-l-2 border-red-500 pl-4 py-1">
+                            <div>
+                                <h4 class="text-xs font-bold text-red-600">Suspicious Activity</h4>
+                                <p class="text-[10px] text-gray-500 leading-tight mt-1">A login attempt from a new location (Moscow, RU) was blocked.</p>
+                                <div class="flex gap-4 mt-2">
+                                    <button class="text-[10px] font-bold text-blue-600 hover:underline">This was me</button>
+                                    <button class="text-[10px] font-bold text-red-600 hover:underline">Secure account</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-4  border-gray-50 border-l-2 border-black pl-4">
+                            <h4 class="text-xs font-bold text-gray-800">New Device Recognized</h4>
+                            <p class="text-[10px] text-gray-400 mt-1">Your account was accessed from a MacBook Pro in London.</p>
+                            <span class="text-[9px] text-gray-300">Oct 12, 2023</span>
+                        </div>
+                        <button class="w-full mt-6 py-2 border border-gray-100 rounded-xl text-[10px] font-bold text-gray-400 hover:bg-gray-50 transition">View All Notifications</button>
+                    </div>
+
+                    <!-- SECURITY SCORE -->
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-gray-400 uppercase">Security Score</span>
+                            <span class="text-2xl font-black text-blue-600">84%</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-gray-100 rounded-full mb-6">
+                            <div class="w-[84%] h-full bg-blue-600 rounded-full"></div>
+                        </div>
+                        <ul class="space-y-3 text-xs">
+                            <li class="flex items-center gap-2 text-emerald-600 font-medium"><span>✓</span> 2FA Enabled</li>
+                            <li class="flex items-center gap-2 text-emerald-600 font-medium"><span>✓</span> Email verified</li>
+                            <li class="flex items-center gap-2 text-gray-400 italic"><span>○</span> Recovery phone missing</li>
+                        </ul>
+                    </div>
+
+                    <!-- PRIVACY & LEGAL -->
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-gray-800 mb-4">Privacy & Legal</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center group cursor-pointer">
+                                <span class="text-xs text-gray-500 group-hover:text-blue-600">Privacy Policy</span>
+                                <span class="text-xs text-gray-300">↗</span>
+                            </div>
+                            <div class="flex justify-between items-center group cursor-pointer">
+                                <span class="text-xs text-gray-500 group-hover:text-blue-600">Data Usage Log</span>
+                                <span class="text-xs text-gray-300">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

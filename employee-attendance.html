@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700;800&family=Plus+Jakarta+Sans:wght=400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#FFFFFF] overflow-x-hidden">
+    <div id="sidebarBackdrop" class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden transition-opacity duration-300 opacity-0"></div>
+
+    <div class="flex min-h-screen relative">
+        <div id="sidebar" class="fixed lg:relative 
+            z-50 
+            min-h-screen 
+            w-[280px] 
+            bg-[#E7F0FF] 
+            border-r border-gray-200 
+            transition-transform duration-300
+            -translate-x-full
+            flex flex-col justify-between
+            lg:translate-x-0 
+            font-jakarta text-md font-semibold
+            ">
+
+            <div class="px-6 py-4 flex items-center justify-between">
+                <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png" alt="HRFlow Africa" class="w-[180px]">
+                <button id="closeMenu" class="lg:hidden p-1 text-gray-600 hover:text-gray-900 text-xl">✕</button>
+            </div>
+
+            <nav class="px-4 my-8 space-y-4 space-x-6 font-jakarta flex-1">
+                <div></div> <a href="employee-dashboard.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Dashboard_button_bxsf4e.png" alt="Dashboard" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="employee-myprofile.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_5_tmwf80.png" alt="profile" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>My Profile</span>
+                </a>
+
+                <a href="employee-attendance.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-white bg-[#3856D6] transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_6_rrglun.png" alt="attendance" class="w-5 h-5 brightness-0 invert">
+                    <span>Attendance</span>
+                </a>
+
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Icon_1_gyfkwz.png" alt="leave request" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Leave Request</span>
+                </a>
+
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_7_uyc4vn.png" alt="payroll" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Payroll</span>
+                </a>
+                    
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_8_v4v39d.png" alt="Performance" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Performance</span>
+                </a>
+
+                <a href="employee-Message (2).html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_9_eyking.png" alt="messages" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Messages</span>
+                </a>
+
+                <a href="employee-notification.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442410/Container_10_j8n9fv.png" alt="notifications" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Notifications</span>
+                </a>
+
+                <a href="employee-settings.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_1_qfhnrd.png" alt="Settings" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Settings</span>
+                </a>
+
+                <div class="pt-4 border-t border-gray-300">
+                    <button class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-white transition-all duration-300 w-full">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780520582/Unconfirmed_742341_kybrwa.png" alt="help">
+                        <span class="text-[#3856D6]">Help Center</span>
+                    </button>
+
+                    <button id="logoutBtn" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#FA5252] hover:bg-[#3856D6] hover:text-white transition-all duration-300 w-full">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780520969/Container_4_ispxmg.png" alt="Logout" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
+                        <span class="text-[#BA1A1A] group-hover:text-white transition-colors">Sign Out</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div class="flex-1 flex flex-col min-w-0">
+            <header id="topbar" class="h-[90px] bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-4 flex-1 max-w-md">
+                    <button id="menuToggle" class="lg:hidden text-2xl p-2 rounded-lg hover:bg-gray-100 focus:outline-none">
+                        ☰
+                    </button>
+
+                    <div class="relative w-full flex items-center">
+                        <span class="absolute left-3 text-gray-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input
+                            type="text"
+                            placeholder="Search data..."
+                            class="w-full pl-10 pr-4 py-2 bg-gray-100 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white"
+                        />
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button class="relative p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780527406/Container_5_da9sea.png" alt="notification">
+                        <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                    </button>
+
+                    <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442410/Icon_xtfkvs.png" alt="message">
+                    </button>
+
+                    <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442408/Container_cpdmbv.png" alt="calendar">
+                    </button>
+
+                    <button class="w-8 h-8 rounded-full overflow-hidden border-2 border-gray-200 hover:border-blue-500">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780527406/Frame_2_kpls9v.png" alt="Profile" class="w-full h-full object-cover" />
+                    </button>
+                </div>
+            </header>
+
+            <div class="p-6 flex flex-1 flex-col bg-[#FFFFFF]">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <button class="text-gray-500 hover:text-gray-700 mb-2 flex items-center gap-1">
+                            <span>←</span>
+                        </button>
+                        <h1 class="text-3xl font-bold text-gray-900">Attendance Overview</h1>
+                        <p class="text-gray-500 mt-1">Real-time tracking for the current pay period.</p>
+                    </div>
+                    <button id="downloadReportBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors self-start sm:self-auto">
+                        <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780520582/Container_3_mmzdjs.png" alt="download">
+                        Download Attendance Report
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="flex flex-col gap-6">
+                        <div class="bg-white p-5 rounded-xl border border-gray-300 h-auto flex flex-col justify-between">
+                            <div>
+                                <p class="text-md text-gray-500 text-center">Current Time</p>
+                                <p id="liveClock" class="text-5xl sm:text-6xl font-bold text-blue-600 text-center mt-2 tracking-tight">09:05:02</p>
+                                <p id="liveDate" class="text-md text-gray-500 text-center mt-1">Thursday, May 28, 2026</p>
+                            </div>
+                            <div class="flex gap-2 mt-4">
+                                <button id="clockInBtn" class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2.5 rounded-lg font-medium transition-all transform active:scale-95 shadow-sm">Clock In</button>
+                                <button id="clockOutBtn" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 py-2.5 rounded-lg font-medium transition-all transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Clock Out</button>
+                            </div>
+                            <p id="clockStatusMsg" class="text-xs text-center text-gray-400 mt-2 italic h-4"></p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-gray-300">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780607986/Overlay_e9d2dt.png" alt="clock">
+                                    <p class="text-sm text-gray-500">Hours This Week</p>
+                                </div>
+                                <span class="text-green-600 text-sm font-medium">+2.4h</span>
+                            </div>
+                            <p class="text-2xl font-bold text-gray-900 mt-2">38.5 / 40</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-gray-300">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <img alt="clock" src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780607986/Background_jufrf1.png">
+                                    <p class="text-sm text-gray-500">Late Arrivals</p>
+                                </div>
+                                <span class="text-red-600 text-sm font-medium bg-red-50 px-2 py-0.5 rounded-md">1 Alert</span>
+                            </div>
+                            <p class="text-2xl font-bold text-gray-900 mt-2">2 Days</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-6">
+                        <div class="bg-white p-5 rounded-xl border border-gray-300 flex flex-col justify-between h-[230px]">
+                            <div class="flex items-center justify-between mb-2">
+                                <p class="text-sm font-medium text-gray-700">Weekly Work Hours</p>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
+                                    <span class="text-xs text-gray-500 font-bold">ACTUAL</span>
+                                </div>
+                            </div>
+                            <div class="h-32 flex items-end justify-between gap-2 pt-2">
+                                <div class="flex flex-col items-center flex-1 group">
+                                    <div class="w-full bg-blue-600 rounded-t h-24 group-hover:bg-blue-700 transition-all relative">
+                                        <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">8.5 hrs</span>
+                                    </div>
+                                    <div class="text-[10px] text-gray-400 mt-2 font-bold">MON</div>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 group">
+                                    <div class="w-full bg-blue-600 rounded-t h-[70px] group-hover:bg-blue-700 transition-all relative">
+                                        <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">6.2 hrs</span>
+                                    </div>
+                                    <div class="text-[10px] text-gray-400 mt-2 font-bold">TUE</div>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 group">
+                                    <div class="w-full bg-blue-600 rounded-t h-28 group-hover:bg-blue-700 transition-all relative">
+                                        <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">9.0 hrs</span>
+                                    </div>
+                                    <div class="text-[10px] text-gray-400 mt-2 font-bold">WED</div>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 group">
+                                    <div class="w-full bg-blue-400 rounded-t h-20 group-hover:bg-blue-500 transition-all relative">
+                                        <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">7.8 hrs</span>
+                                    </div>
+                                    <div class="text-[10px] text-gray-400 mt-2 font-bold">THU</div>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 group">
+                                    <div class="w-full bg-gray-200 rounded-t h-6 group-hover:bg-gray-300 transition-all relative">
+                                        <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Pending</span>
+                                    </div>
+                                    <div class="text-[10px] text-gray-400 mt-2 font-bold">FRI</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-gray-300 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <p class="text-sm font-medium text-gray-700">Recent Activity</p>
+                                    <button id="viewAllActivityBtn" class="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors">View All</button>
+                                </div>
+                                <div class="overflow-x-auto w-full">
+                                    <table class="w-full text-sm min-w-[400px]">
+                                        <thead class="bg-gray-50 text-gray-600 font-medium">
+                                            <tr>
+                                                <th class="text-left py-2.5 px-3">DATE</th>
+                                                <th class="text-left py-2.5 px-3">CLOCK IN</th>
+                                                <th class="text-left py-2.5 px-3">CLOCK OUT</th>
+                                                <th class="text-left py-2.5 px-3">DURATION</th>
+                                                <th class="text-left py-2.5 px-3">STATUS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="activityTableBody">
+                                            <tr class="border-t border-gray-100 hover:bg-gray-50/80 transition-colors">
+                                                <td class="py-2.5 px-3 text-gray-700 font-medium">May 23, 2026</td>
+                                                <td class="py-2.5 px-3 text-gray-600">08:45 AM</td>
+                                                <td class="py-2.5 px-3 text-gray-600">05:30 PM</td>
+                                                <td class="py-2.5 px-3 text-gray-600">8h 45m</td>
+                                                <td class="py-2.5 px-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider">ON-TIME</span></td>
+                                            </tr>
+                                            <tr class="border-t border-gray-100 hover:bg-gray-50/80 transition-colors">
+                                                <td class="py-2.5 px-3 text-gray-700 font-medium">May 22, 2026</td>
+                                                <td class="py-2.5 px-3 text-gray-600">09:15 AM</td>
+                                                <td class="py-2.5 px-3 text-gray-600">06:00 PM</td>
+                                                <td class="py-2.5 px-3 text-gray-600">8h 45m</td>
+                                                <td class="py-2.5 px-3"><span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider">LATE</span></td>
+                                            </tr>
+                                            <tr class="border-t border-gray-100 hover:bg-gray-50/80 transition-colors">
+                                                <td class="py-2.5 px-3 text-gray-700 font-medium">May 21, 2026</td>
+                                                <td class="py-2.5 px-3 text-gray-600">08:55 AM</td>
+                                                <td class="py-2.5 px-3 text-gray-600">05:45 PM</td>
+                                                <td class="py-2.5 px-3 text-gray-600">8h 50m</td>
+                                                <td class="py-2.5 px-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider">ON-TIME</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-6">
+                        <div class="bg-blue-600 text-white p-5 rounded-xl shadow-sm">
+                            <p class="text-sm font-medium mb-4 tracking-wide uppercase opacity-90">Monthly Summary (May)</p>
+                            <div class="space-y-3.5">
+                                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                                    <span class="text-sm opacity-80">Total Work Days</span>
+                                    <span class="font-bold text-lg">22</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                                    <span class="text-sm opacity-80">Avg. Hours/Day</span>
+                                    <span class="font-bold text-lg">8.4h</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                                    <span class="text-sm opacity-80">Overtime</span>
+                                    <span class="font-bold text-lg">4.2h</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm opacity-80">Efficiency Rate</span>
+                                    <span class="font-bold text-lg text-green-300">96%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-gray-300">
+                            <p class="text-sm font-medium text-gray-700 mb-4">Task Distribution</p>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
+                                        <span>DEVELOPMENT</span>
+                                        <span class="font-semibold text-gray-700">65%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full transition-all duration-500" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
+                                        <span>MEETINGS</span>
+                                        <span class="font-semibold text-gray-700">20%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-500 h-2 rounded-full transition-all duration-500" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-gray-500 mb-1">
+                                        <span>PLANNING</span>
+                                        <span class="font-semibold text-gray-700">15%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-yellow-500 h-2 rounded-full transition-all duration-500" style="width: 15%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-5 rounded-xl border border-blue-100 shadow-sm flex items-start gap-3">
+                            <img class="w-5 h-5 mt-0.5" src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780608378/Container_6_w2fwgb.png" alt="AI Icon">
+                            <div>
+                                <p class="text-sm font-bold text-blue-800">AI Insight</p>
+                                <p class="text-sm text-blue-900/80 italic mt-1 leading-relaxed">
+                                    "You tend to clock in 15 minutes later on Tuesdays. Improving your Tuesday morning routine could stabilize your weekly average."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // ==========================================
+            // 1. MOBILE RESPONSIVE SIDEBAR MENU DRAWER
+            // ==========================================
+            const menuToggle = document.getElementById('menuToggle');
+            const closeMenu = document.getElementById('closeMenu');
+            const sidebar = document.getElementById('sidebar');
+            const backdrop = document.getElementById('sidebarBackdrop');
+
+            function openSidebarMenu() {
+                sidebar.classList.remove('-translate-x-full');
+                backdrop.classList.remove('hidden');
+                setTimeout(() => {
+                    backdrop.classList.add('opacity-100');
+                }, 10);
+                document.body.classList.add('overflow-hidden');
+            }
+
+            function closeSidebarMenu() {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.remove('opacity-100');
+                setTimeout(() => {
+                    backdrop.classList.add('hidden');
+                }, 300);
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            if(menuToggle) menuToggle.addEventListener('click', openSidebarMenu);
+            if(closeMenu) closeMenu.addEventListener('click', closeSidebarMenu);
+            if(backdrop) backdrop.addEventListener('click', closeSidebarMenu);
+
+
+            // ==========================================
+            // 2. REALTIME LIVE CLOCK & DATE MODULE
+            // ==========================================
+            const liveClockElement = document.getElementById('liveClock');
+            const liveDateElement = document.getElementById('liveDate');
+
+            function runLiveClockUpdate() {
+                const now = new Date();
+                
+                // Format Time: HH:MM:SS
+                let hours = String(now.getHours()).padStart(2, '0');
+                let minutes = String(now.getMinutes()).padStart(2, '0');
+                let seconds = String(now.getSeconds()).padStart(2, '0');
+                if(liveClockElement) {
+                    liveClockElement.textContent = `${hours}:${minutes}:${seconds}`;
+                }
+
+                // Format Calendar Date String
+                const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                if(liveDateElement) {
+                    liveDateElement.textContent = now.toLocaleDateString('en-US', dateOptions);
+                }
+            }
+            
+            // Initialize Immediately and tick every 1000ms
+            runLiveClockUpdate();
+            setInterval(runLiveClockUpdate, 1000);
+
+
+            // ==========================================
+            // 3. CLOCK IN / CLOCK OUT STATE MANAGEMENT
+            // ==========================================
+            const clockInBtn = document.getElementById('clockInBtn');
+            const clockOutBtn = document.getElementById('clockOutBtn');
+            const clockStatusMsg = document.getElementById('clockStatusMsg');
+            const activityTableBody = document.getElementById('activityTableBody');
+
+            let sessionStartTime = null;
+
+            if(clockInBtn && clockOutBtn) {
+                clockInBtn.addEventListener('click', () => {
+                    sessionStartTime = new Date();
+                    
+                    // State Toggle
+                    clockInBtn.disabled = true;
+                    clockInBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    clockOutBtn.disabled = false;
+                    
+                    // User Feedback UI message
+                    const stampString = sessionStartTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'});
+                    if(clockStatusMsg) {
+                        clockStatusMsg.textContent = `Active Session: Checked-in at ${stampString}`;
+                        clockStatusMsg.classList.remove('text-gray-400', 'text-red-500');
+                        clockStatusMsg.classList.add('text-green-600', 'font-medium');
+                    }
+                });
+
+                clockOutBtn.addEventListener('click', () => {
+                    if(!sessionStartTime) return;
+                    
+                    const endTime = new Date();
+                    const diffMs = endTime - sessionStartTime;
+                    
+                    // Calculate basic metrics
+                    const diffMins = Math.floor((diffMs / 1000) / 60);
+                    const diffSecs = Math.floor((diffMs / 1000) % 60);
+                    
+                    // Format for tabular entry logs
+                    const dateStr = endTime.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric'});
+                    const inStr = sessionStartTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                    const outStr = endTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                    const durationStr = `${diffMins}m ${diffSecs}s`; // Realtime short hand for testing mock durations easily
+
+                    // Inject record into activity layout stream
+                    const newRow = document.createElement('tr');
+                    newRow.className = "border-t border-gray-100 bg-blue-50/50 hover:bg-gray-50 transition-colors animate-fade-in";
+                    newRow.innerHTML = `
+                        <td class="py-2.5 px-3 text-gray-700 font-medium">${dateStr}</td>
+                        <td class="py-2.5 px-3 text-gray-600">${inStr}</td>
+                        <td class="py-2.5 px-3 text-gray-600">${outStr}</td>
+                        <td class="py-2.5 px-3 text-gray-600">${durationStr}</td>
+                        <td class="py-2.5 px-3"><span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider">LOGGED</span></td>
+                    `;
+                    
+                    if(activityTableBody) {
+                        activityTableBody.insertBefore(newRow, activityTableBody.firstChild);
+                    }
+
+                    // Reset buttons state context
+                    clockInBtn.disabled = false;
+                    clockInBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    clockOutBtn.disabled = true;
+                    
+                    if(clockStatusMsg) {
+                        clockStatusMsg.textContent = "Shift saved successfully.";
+                        clockStatusMsg.classList.remove('text-green-600');
+                        clockStatusMsg.classList.add('text-gray-400');
+                    }
+                    sessionStartTime = null;
+                });
+            }
+
+
+            // User actions and alert
+            const downloadBtn = document.getElementById('downloadReportBtn');
+            const viewAllBtn = document.getElementById('viewAllActivityBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            if(downloadBtn) {
+                downloadBtn.addEventListener('click', () => {
+                    alert('Generating your comprehensive system attendance CSV/PDF ledger file...');
+                });
+            }
+            if(viewAllBtn) {
+                viewAllBtn.addEventListener('click', () => {
+                    alert('Redirecting to full historical log records panel view.');
+                });
+            }
+            if(logoutBtn) {
+                logoutBtn?.addEventListener('click', () => {
+                    if(confirm('Are you sure you want to securely clear session and sign out?')) {
+                        window.location.href = "employee-welcome.html"; 
+                    }
+                });
+            }
+
+        });
+    </script>
+
+
+</body>
+</html>
