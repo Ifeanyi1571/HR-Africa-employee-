@@ -397,17 +397,17 @@
             }
 
 
-            // --- 6. ACTION INTERACTION ALERT BINDINGS ---
-            const buttons = document.querySelectorAll('.action-btn, #previewBtn, #messageBtn, #notificationBtn');
-            buttons.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    // Prevent default anchor jumping behavior
-                    if(e.currentTarget.tagName === 'A') e.preventDefault();
+            // // --- 6. ACTION INTERACTION ALERT BINDINGS ---
+            // const buttons = document.querySelectorAll('.action-btn, #previewBtn, #messageBtn, #notificationBtn');
+            // buttons.forEach(btn => {
+            //     btn.addEventListener('click', (e) => {
+            //         // Prevent default anchor jumping behavior
+            //         if(e.currentTarget.tagName === 'A') e.preventDefault();
                     
-                    const label = e.currentTarget.innerText || e.currentTarget.querySelector('p')?.innerText || e.currentTarget.querySelector('img')?.alt || 'Header Feature';
-                    alert(`Action Context Called: Quick link template connecting to "${label.trim()}" processing module.`);
-                });
-            });
+            //         const label = e.currentTarget.innerText || e.currentTarget.querySelector('p')?.innerText || e.currentTarget.querySelector('img')?.alt || 'Header Feature';
+            //         alert(`Action Context Called: Quick link template connecting to "${label.trim()}" processing module.`);
+            //     });
+            // });
 
         });
     </script>
