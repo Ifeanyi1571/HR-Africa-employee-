@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Leave Request</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          colors: {
+            primary: "#4F46E5",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .card {
+      @apply bg-white rounded-xl border shadow-sm;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FFFFFF]">
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden transition-opacity duration-300 opacity-0"></div>
+
+    <div class="flex min-h-screen">
+        <div id="sidebar" class="fixed lg:relative z-50 min-h-screen w-[280px] bg-[#E7F0FF] border-r border-gray-200 transition-transform duration-300 -translate-x-full flex flex-col lg:translate-x-0 font-semibold text-md">
+            <div class="px-6 py-4 flex items-center justify-between">
+                <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780245572/Text_e0vh6o.png" alt="HRFlow Africa" class="w-[180px]">
+                <button id="close-sidebar-btn" class="lg:hidden p-1 text-gray-500 hover:bg-blue-100 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <nav id="sidebar-nav" class="px-4 my-8 space-y-4">
+                <a href="employee-dashboard.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Dashboard_button_bxsf4e.png" alt="Dashboard" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="employee-myprofile.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_5_tmwf80.png" alt="profile" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>My Profile</span>
+                </a>
+
+                <a href="employee-attendance.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_6_rrglun.png" alt="attendance" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Attendance</span>
+                </a>
+
+                <a href="employee-leave.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Icon_1_gyfkwz.png" alt="leave request" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Leave Request</span>
+                </a>
+
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_7_uyc4vn.png" alt="payroll" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Payroll</span>
+                </a>
+                    
+                <a href="#" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_8_v4v39d.png" alt="Performance" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Performance</span>
+                </a>
+
+                <a href="employee-Message (2).html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442409/Container_9_eyking.png" alt="messages" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Messages</span>
+                </a>
+
+                <a href="employee-notification.html" class="group flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dblefz6rk/image/upload/v1780442410/Container_10_j8n9fv.png" alt="notifications" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Notifications</span>
+                </a>
+
+                <a href="employee-settings.html" class="flex items-center gap-4 px-4 py-3 rounded-xl text-[#343A40] hover:bg-[#3856D6] hover:text-white transition-all duration-300">
+                    <img src="https://res.cloudinary.com/dnmaevqsp/image/upload/v1780407707/Container_1_qfhnrd.png" alt="Settings" class="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </div>
+
+        
+<div class="p-6 bg-gray-50 min-h-screen w-full">
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-6">
+    <div>
+      <h1 class="text-3xl font-bold text-gray-800">Leave Request</h1>
+      <p class="text-gray-500">
+        Submit a new leave request for approval
+      </p>
+    </div>
+
+    <button
+      class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition"
+    >
+      View History
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    
+    <!-- Request Form -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border p-6">
+      <h2 class="text-xl font-semibold mb-6">Request Leave</h2>
+
+      <form id="leaveForm" class="space-y-5">
+
+        <!-- Leave Type -->
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">
+            Leave Type
+          </label>
+
+          <select
+            id="leaveType"
+            name="leaveType"
+            class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+          >
+            <option value="">Select Leave Type</option>
+            <option value="Annual">Annual Leave</option>
+            <option value="Sick">Sick Leave</option>
+            <option value="Casual">Casual Leave</option>
+            <option value="Maternity">Maternity Leave</option>
+          </select>
+        </div>
+
+        <!-- Dates -->
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-2 text-sm font-medium text-gray-700">
+              Start Date
+            </label>
+
+            <input
+              type="date"
+              id="startDate"
+              name="startDate"
+              class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block mb-2 text-sm font-medium text-gray-700">
+              End Date
+            </label>
+
+            <input
+              type="date"
+              name="endDate"
+              id="endDate"
+              class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+          </div>
+        </div>
+
+        <!-- Reason -->
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">
+            Reason
+          </label>
+
+          <textarea
+            id="reason"
+            name="reason"
+            rows="5"
+            placeholder="Explain the reason for your leave..."
+            class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+          ></textarea>
+        </div>
+
+        <!-- Attachment -->
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-700">
+            Supporting Document (Optional)
+          </label>
+
+          <input
+            type="file"
+            class="w-full border rounded-lg px-4 py-2"
+          />
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition"
+        >
+          Submit Leave Request
+        </button>
+      </form>
+    </div>
+
+    <!-- Leave Balance Card -->
+    <div class="bg-white rounded-xl shadow-sm border p-6">
+      <h2 class="text-xl font-semibold mb-5">
+        Leave Balance
+      </h2>
+
+      <div class="space-y-5">
+
+        <div>
+          <div class="flex justify-between mb-1">
+            <span>Annual Leave</span>
+            <span>18 / 25</span>
+          </div>
+
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div
+              class="bg-blue-600 h-2 rounded-full"
+              style="width:72%"
+            ></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between mb-1">
+            <span>Sick Leave</span>
+            <span>10 / 12</span>
+          </div>
+
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div
+              class="bg-red-500 h-2 rounded-full"
+              style="width:83%"
+            ></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between mb-1">
+            <span>Casual Leave</span>
+            <span>4 / 5</span>
+          </div>
+
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div
+              class="bg-green-500 h-2 rounded-full"
+              style="width:80%"
+            ></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Requests -->
+  <div class="bg-white rounded-xl shadow-sm border mt-6 p-6">
+    <h2 class="text-xl font-semibold mb-5">
+      Recent Leave Requests
+    </h2>
+
+    <div class="overflow-x-auto">
+      <table class="w-full">
+        <thead>
+          <tr class="border-b">
+            <th class="text-left py-3">Leave Type</th>
+            <th class="text-left py-3">Dates</th>
+            <th class="text-left py-3">Days</th>
+            <th class="text-left py-3">Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="leaveRequests">
+          <tr class="border-b">
+            <td class="py-4">Annual Leave</td>
+            <td>Aug 15 - Aug 20</td>
+            <td>4 Days</td>
+            <td>
+              <span
+                class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm"
+              >
+                Pending
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById("leaveForm");
+const token = localStorage.getItem("token")
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const payload = {
+    leaveType: document.getElementById("leaveType").value,
+    startDate: document.getElementById("startDate").value,
+    endDate: document.getElementById("endDate").value,
+    reason: document.getElementById("reason").value,
+  };
+
+  console.log(payload);
+
+
+
+  try {
+    const res = await fetch(
+    "https://hrflow-backend-nf0t.onrender.com/api/leave-request/",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify(payload)
+    }
+  )
+
+  const data = res.json()
+
+  console.log(data)
+    alert("Leave Request Submitted");
+  } catch (error) {
+    console.error(error)
+  }
+
+ 
+});
+</script>
+
+      
+</body>
+</html>
